@@ -3,7 +3,8 @@ import LastNews from './components/LastNews'
 import Activities from './components/Activities'
 import ContactUs from './components/ContactUs'
 import UniversityStatistics from './components/UniversityStatistics'
-import ResearchSi from './components/researchSi'
+import ResearchSi from './components/ResearchSi'
+
 
 export default async function Home({ params: { lang } }) {
   const { page } = await getDictionary(lang)

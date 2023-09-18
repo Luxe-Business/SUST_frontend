@@ -6,7 +6,7 @@ export default function Research() {
     <>
       <h2 className='mb-2 text-3xl font-bold'>البحث العلمي </h2>
       <hr className='mb-5' />
-      <Image width={350} height={250} className='mb-5 w-full' src={research} />
+      <Image width={350} height={250} className='mb-5 w-full' src={research} alt='' />
       <p className='text-semibold mb-3 text-lg'>
         هو كل جهد علمي منظَّم يهدف إلى تنمية المعرفة الإنسانية والقدرة على
         تطويرها وتنفيذها وتطبيقها؛ لذلك تسعى عمادة البحث العلمي إلى توفير المناخ
