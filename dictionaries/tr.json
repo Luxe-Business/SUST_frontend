@@ -1,0 +1,110 @@
+{
+  "navigation": {
+    "home": "Ana Sayfa",
+    "about": "Üniversite Hakkında",
+    "colleges": "Fakülteler ve Enstitüler",
+    "academic": "Akademik İşler",
+    "research": "Bilimsel Araştırma",
+    "life": "Öğrenci Hayatı",
+    "hospital": "hospital",
+    "subhospital": [
+      [
+        "subhospital",
+        "subhospital"
+      ],
+      [
+        "subhospital2",
+        "subhospital"
+      ],
+      [
+        "subhospital3",
+        "subhospital"
+      ]
+    ]
+  },
+  "hero": {
+    "title": "Üniversite haberleri",
+    "description": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500"
+  },
+  "page": {
+    "home": {
+      "title": "Willkommen bei NextJs i18n",
+      "description": "Internationalisierung im NextJs 13 App-Router",
+      "lastNews": {
+        "title": "Son Haberler",
+        "news1": {
+          "title": "Haber No.1",
+          "description": "Yayınlanan",
+          "date": "13.09.2023"
+        },
+        "news2": {
+          "title": "Haber No.2",
+          "description": "Yayınlanan",
+          "date": "12.09.2023"
+        },
+        "news3": {
+          "title": "Haber No.3",
+          "description": "Yayınlanan",
+          "date": "10.09.2023"
+        }
+      },
+      "stats": {
+        "title": "Üniversite istatistik tablosu",
+        "counterSt": "Üniversite öğrencisi sayısı",
+        "CounterGS": "Üniversite Mezunları",
+        "CounterHi": "Lisansüstü Öğrenciler",
+        "CounterStHi": "Lisansüstü Öğrencileri"
+      },
+      "cuntactus": {
+        "title":"İletişim Formu",
+        "subTitle":"Hadi her şeyi konuşalım!",
+        "fullName":"TAM AD",
+        "mail":"POSTA",
+        "message":"MESAJ",
+        "sendMessage":"MESAJ GÖNDER"
+      },
+      "activities": {
+        "title": "Faaliyetler",
+        "activity1": {
+          "title": "Faaliyet No.1",
+          "description": "Yayınlanan",
+          "date": "13.09.2023"
+        },
+        "activity2": {
+          "title": "Faaliyet No.2",
+          "description": "Yayınlanan",
+          "date": "12.09.2023"
+        },
+        "activity3": {
+          "title": "Faaliyet No.3",
+          "description": "Yayınlanan",
+          "date": "10.09.2023"
+        }
+      }
+    },
+    "about": {
+      "title": "Über uns",
+      "description": "Dies ist die About-Seite"
+    },
+    "news": {
+      "title": "Tüm Haberler Sayfası"
+    }
+  },
+  "footer": {
+    "community": "Topluluk",
+    "about": "Üniversite Hakkında",
+    "colleges": "Kolejler ve Enstitüler",
+    "academic": "Akademik İşler",
+    "research": "Bilimsel Araştırma",
+    "life": "Öğrenci Hayatı",
+    "hospital": "Hastane",
+    "resources": "Kaynaklar",
+    "accessibility": "Erişilebilirlik",
+    "usability": "Kullanılabilirlik",
+    "allright": "Tüm Hakları Saklıdır © 2020",
+    "terms": "Hizmet Şartları",
+    "privacy": "Gizlilik Politikası",
+    "security": "Güvenlik",
+    "sitemap": "Site Haritası"
+  }
+}

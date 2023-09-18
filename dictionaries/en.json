@@ -1,0 +1,110 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About University",
+    "colleges": "Colleges and Institutes",
+    "academic": "Academic Affairs",
+    "research": "Scientific Research",
+    "life": "Student Life",
+    "hospital": "hospital ",
+    "subhospital": [
+      [
+        "subhospital",
+        "subhospital"
+      ],
+      [
+        "subhospital2",
+        "subhospital"
+      ],
+      [
+        "subhospital3",
+        "subhospital"
+      ]
+    ]
+  },
+  "hero": {
+    "title": "University Headlines",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+  },
+  "page": {
+    "home": {
+      "title": "Welcome to NextJs i18n",
+      "description": "Internationalization in NextJs 13 App router",
+      "lastNews": {
+        "title": "Latest News",
+        "news1": {
+          "title": "News No.1",
+          "description": "Published",
+          "date": "13.09.2023"
+        },
+        "news2": {
+          "title": "News No.2",
+          "description": "Published",
+          "date": "12.09.2023"
+        },
+        "news3": {
+          "title": "News No.3",
+          "description": "Published",
+          "date": "10.09.2023"
+        }
+      },
+      "stats": {
+        "title": "University statistics chart",
+        "counterSt": "Number of university students",
+        "CounterGS": "University Graduates",
+        "CounterHi": "Postgraduates",
+        "CounterStHi": "Graduate Students"
+      },
+      "cuntactus": {
+        "title":"Contact Form",
+        "subTitle":"Lets talk about everything!",
+        "fullName":"FULL NAME",
+        "mail":"MAIL",
+        "message":"MESSAGE",
+        "sendMessage":"SEND MESSAGE"
+      },
+      "activities": {
+        "title": "Latest Activities",
+        "activity1": {
+          "title": "Activity No.1",
+          "description": "Published",
+          "date": "13.09.2023"
+        },
+        "activity2": {
+          "title": "Activity No.2",
+          "description": "Published",
+          "date": "12.09.2023"
+        },
+        "activity3": {
+          "title": "Activity No.3",
+          "description": "Published",
+          "date": "10.09.2023"
+        }
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "This is the about page"
+    },
+    "news": {
+      "title": "All News Page"
+    }
+  },
+  "footer": {
+    "community": "Community",
+    "about": "About University",
+    "colleges": "Colleges and Institutes",
+    "academic": "Academic Affairs",
+    "research": "Scientific Research",
+    "life": "Student Life",
+    "hospital": "hospital ",
+    "resources": "Resources",
+    "accessibility": "Accessibility",
+    "Usability": "usability",
+    "allright": "2020 The Good Company. All Rights Reserved",
+    "terms": "Terms of service",
+    "privacy": "Privacy Policy",
+    "security": "Security",
+    "sitemap": "Sitemap"
+  }
+}
