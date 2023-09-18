@@ -1,6 +1,7 @@
 import { getDictionary } from '@/lib/dictionary'
 import React from 'react'
-import Research from '../components/research'
+import Research from '../components/Research'
+
 
 export default async function ResearchPage({ params: { lang } }) {
   const {
