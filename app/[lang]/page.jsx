@@ -10,13 +10,13 @@ export default async function Home({ params: { lang } }) {
   const { page } = await getDictionary(lang)
 
   return (
-      <div className='container'>
-        <LastNews page = {page} />
-        <Activities page = {page} />
-        <UniversityStatistics page = {page}/>
-        <ResearchSi/>
-        <ContactUs  page = {page}/>
-      </div>
+    <div className='container'>
+      <LastNews page={page} />
+      <Activities page={page} />
+      <UniversityStatistics page={page} />
+      <ResearchSi />
+      <ContactUs page={page} />
+    </div>
   )
 }
 

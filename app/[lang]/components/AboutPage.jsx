@@ -15,10 +15,9 @@ function AboutPage({lang}) {
 
   useEffect(() => {
     async function getData() {
-      const fetchedData = await fetchData(lang, 'about-univercities');
+      const fetchedData = await fetchData(lang, 'university-settings');
       setData(fetchedData);
     }
-
     getData();
   }, [lang]);
 
