@@ -33,7 +33,7 @@ async function SocialMedia({ lang }) {
               href={
                 !pageSettingsData[0]
                   ? '/#'
-                  : pageSettingsData[0].attributes.facebook_URL
+                  : pageSettingsData[0]?.attributes.facebook_URL
               }
             >
               <FaFacebookF className='hover:translate-x-1' />
@@ -45,7 +45,7 @@ async function SocialMedia({ lang }) {
               href={
                 !pageSettingsData[0]
                   ? '/#'
-                  : pageSettingsData[0].attributes.instagram_URL
+                  : pageSettingsData[0]?.attributes.instagram_URL
               }
             >
               <BsInstagram className='hover:translate-x-1' />
@@ -57,7 +57,7 @@ async function SocialMedia({ lang }) {
               href={
                 !pageSettingsData[0]
                   ? '/#'
-                  : pageSettingsData[0].attributes.youtube_URL
+                  : pageSettingsData[0]?.attributes.youtube_URL
               }
             >
               <BsYoutube className='hover:translate-x-1' />
@@ -69,7 +69,7 @@ async function SocialMedia({ lang }) {
               href={
                 !pageSettingsData[0]
                   ? '/#'
-                  : pageSettingsData[0].attributes.telegram_URL
+                  : pageSettingsData[0]?.attributes.telegram_URL
               }
             >
               <BsTelegram className='hover:translate-x-1' />

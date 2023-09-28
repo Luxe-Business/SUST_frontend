@@ -189,7 +189,7 @@ export default async function Footer({ lang }) {
                   href={
                     !pageSettingsData[0]
                       ? '/#'
-                      : pageSettingsData[0].attributes.facebook_URL
+                      : pageSettingsData[0]?.attributes.facebook_URL
                   }
                 >
                   <FaFacebookF />
@@ -201,7 +201,7 @@ export default async function Footer({ lang }) {
                   href={
                     !pageSettingsData[0]
                       ? '/#'
-                      : pageSettingsData[0].attributes.instagram_URL
+                      : pageSettingsData[0]?.attributes.instagram_URL
                   }
                 >
                   <BsInstagram />
@@ -213,7 +213,7 @@ export default async function Footer({ lang }) {
                   href={
                     !pageSettingsData[0]
                       ? '/#'
-                      : pageSettingsData[0].attributes.youtube_URL
+                      : pageSettingsData[0]?.attributes.youtube_URL
                   }
                 >
                   <BsYoutube />
@@ -225,7 +225,7 @@ export default async function Footer({ lang }) {
                   href={
                     !pageSettingsData[0]
                       ? '/#'
-                      : pageSettingsData[0].attributes.telegram_URL
+                      : pageSettingsData[0]?.attributes.telegram_URL
                   }
                 >
                   <BsTelegram />

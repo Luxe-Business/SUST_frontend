@@ -39,59 +39,59 @@ const page = async ({ params: { lang, id } }) => {
       ) : (
         <div>
           <h1 className='text-5xl'>
-            {!currentCollegeData[0].attributes.Title ? (
+            {!currentCollegeData[0]?.attributes.Title ? (
               <p>No Data</p>
             ) : (
-              currentCollegeData[0].attributes.Title
+              currentCollegeData[0]?.attributes.Title
             )}
           </h1>
           <div className=''>
-            {!currentCollegeData[0].attributes.About_the_college ? (
+            {!currentCollegeData[0]?.attributes.About_the_college ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.About_the_college)
+              parse(currentCollegeData[0]?.attributes.About_the_college)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.Bachelor_programs ? (
+            {!currentCollegeData[0]?.attributes.Bachelor_programs ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.Bachelor_programs)
+              parse(currentCollegeData[0]?.attributes.Bachelor_programs)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.Bachelor_programs ? (
+            {!currentCollegeData[0]?.attributes.Bachelor_programs ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.Bachelor_programs)
+              parse(currentCollegeData[0]?.attributes.Bachelor_programs)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.Postgraduate_programs ? (
+            {!currentCollegeData[0]?.attributes.Postgraduate_programs ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.Postgraduate_programs)
+              parse(currentCollegeData[0]?.attributes.Postgraduate_programs)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.The_Activities ? (
+            {!currentCollegeData[0]?.attributes.The_Activities ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.The_Activities)
+              parse(currentCollegeData[0]?.attributes.The_Activities)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.Content ? (
+            {!currentCollegeData[0]?.attributes.Content ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.Content)
+              parse(currentCollegeData[0]?.attributes.Content)
             )}
           </div>
           <div className=''>
-            {!currentCollegeData[0].attributes.Dean_speech ? (
+            {!currentCollegeData[0]?.attributes.Dean_speech ? (
               <p>No Data</p>
             ) : (
-              parse(currentCollegeData[0].attributes.Dean_speech)
+              parse(currentCollegeData[0]?.attributes.Dean_speech)
             )}
           </div>
         </div>

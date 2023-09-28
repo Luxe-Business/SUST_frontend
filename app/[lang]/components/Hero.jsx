@@ -12,7 +12,7 @@ async function Hero({ lang }) {
     if (pageSettingsData.length == 0) {
       return 'https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg'
     } else {
-      return pageSettingsData[0].attributes.cover_image.data.attributes.formats
+      return pageSettingsData[0]?.attributes.cover_image.data.attributes.formats
         .large.url
     }
   }
@@ -34,13 +34,13 @@ async function Hero({ lang }) {
             <h1 className='mb-10 mt-2 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl'>
               {pageSettingsData.length == 0
                 ? ''
-                : pageSettingsData[0].attributes.Cover_Title}{' '}
+                : pageSettingsData[0]?.attributes.Cover_Title}{' '}
               <br />
             </h1>
             <p className='lg:px-64'>
               {pageSettingsData.length == 0
                 ? ''
-                : pageSettingsData[0].attributes.Cover_Descreption}
+                : pageSettingsData[0]?.attributes.Cover_Descreption}
             </p>
           </div>
         </div>
