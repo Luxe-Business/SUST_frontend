@@ -1,23 +1,26 @@
 import React from 'react'
+import parse from 'html-react-parser'
+import { getAcademicAffairs } from '@/app/libs/getAllData'
 
-function Academic() {
+async function Academic({ lang }) {
+  const AcademicAffairsData = await getAcademicAffairs(lang)
+
+  if (AcademicAffairsData.length == 0) {
+    return (
+      <div className='container'>
+        <h1 className='text-center text-6xl font-bold text-red-500'>
+          This Page Data is Empty
+        </h1>
+      </div>
+    )
+  }
+  const AcadimicData = AcademicAffairsData[0]
   return (
     <div>
-        <h2 className='text-3xl font-bold mb-2'>اختصاصات الشئون الأكاديمية</h2>
-        <hr className = "mb-5" />
-      <ol className='list-decimal	text-lg font-semibold opacity-60 space-y-2'>
-        <li>الإشراف على أعمال الكليات وجميع الوحدات الأكاديمية بما في ذلك برامج خدمة المجتمع ومراكز الأبحاث.</li>
-        <li>القيام بإجراء دراسات تهدف لتقييم وتطوير المناهج والخطط والبرامج المنهجية واللامنهجية وتحديد متطلبات الجامعة من أعضاء هيئة التدريس والأبنية والمختبرات واللوازم الأخرى.</li>
-        <li>
-        الإشراف على تنفيذ اجراءات تعيين أعضاء هيئة التدريس وتثبيتهم وترقياتهم ونقلهم وانتدابهم واعارتهم ومنحهم اجازات التفرغ العلمي ومشاركتهم في الندوات والمؤتمرات العلمية الداخلية والخارجية وكل ما يتعلق بشئون أعضاء هيئة التدريس وفقاً للأنظمة والقوانين المعمول بها في الجامعة.
-        </li>
-      <li>دراسة المقترحات بإنشاء كليات أو معاهد أو مراكز جديدة أو استحداث أقسام علمية في الكليات أو المعاهد أو المراكز التابعة للجامعة، والاشتراك مع المختصين في وضع المناهج الخاصة بها تمهيداً لعرضها على مجلس الجامعة.</li>
-    <li>دراسة كل ما يتعلق بسياسة القبول للطلبة ومتابعة قضايا الخريجين.</li>
-    <li>الإشراف على عمادة الدراسات العليا والبحث العلمي</li>
-    <li>الإشراف على العمادات المساندة والمراكز العلمية (شئون الطلبة-القبول والتسجيل-مراكز الأبحاث-المكتبة).</li>
-    <li>أمانة سر مجلس الجامعة وإعداد محاضر الاجتماعات وتفريغها إلى جهات الاختصاص لتنفيذ ما جاء فيها.</li>
-
-      </ol>
+      <h2 className='mb-2 text-3xl font-bold'>
+        {AcadimicData.attributes.Title}
+      </h2>
+      {parse(AcadimicData.attributes.Content)}
     </div>
   )
 }

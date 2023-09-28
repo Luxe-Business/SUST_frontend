@@ -4,6 +4,7 @@ import Header from './components/header'
 import { Inter } from 'next/font/google'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
+import {Providers} from "./providers";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -27,7 +28,9 @@ const direction = isArabic ? 'rtl' : 'ltr';
           <section className='py-6'>
             <Hero lang = {params.lang} />
            <div className='py-20'>
-           {children}
+          <Providers>
+          {children}
+        </Providers>
            </div>
           </section>
         </main>
@@ -36,3 +39,6 @@ const direction = isArabic ? 'rtl' : 'ltr';
     </html>
   )
 }
+
+// app/layout.tsx
+

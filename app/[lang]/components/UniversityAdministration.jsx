@@ -1,6 +1,6 @@
 import parse from 'html-react-parser'
 
-export default function Vision({ content }) {
+export default function Administration({ content }) {
   return (
     <div className=''>
       <div className='text-xl'>

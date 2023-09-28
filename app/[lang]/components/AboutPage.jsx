@@ -1,49 +1,82 @@
 'use client'
-import React, { useState, useEffect } from 'react';
-import { fetchData } from '@/app/api/route';
+
 import { Tab } from '@headlessui/react'
 import About from './About'
 import Greeting from './Greeting'
 import Vision from './Vision'
+import Slogan from './UniversitySlogan'
+import Plan from './StrategicPlan'
+import Chart from './OrganizationalChart'
+import Administration from './UniversityAdministration'
+import Offices from './OfficesAndDepartments'
+import Depend from './Dependability'
+import Policy from './Policy'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-function AboutPage({lang}) {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    async function getData() {
-      const fetchedData = await fetchData(lang, 'university-settings');
-      setData(fetchedData);
-    }
-    getData();
-  }, [lang]);
-
+function AboutPage({
+  persImage,
+  aboutUniversity,
+  PrWelcomeMessagey,
+  universityPolicy,
+  UniversitySlogan,
+  StrategicPlan,
+  OrganizationalChart,
+  UniversityAdministration,
+  OfficesAndDepartments,
+  Dependability,
+  visionAndMission,
+  lang
+}) {
   const categories = {
     'عن الجامعة': {
       id: 1,
-      component: <About content={data?.Description}/>
+      component: <About content={aboutUniversity} />
     },
     'رسالة ترحيب رئيس الجامعة': {
       id: 2,
-      component: <Greeting content={data?.Welcome_Message}/>
+      component: <Greeting content={PrWelcomeMessagey} image={persImage} />
     },
     'سياسة الجامعة': {
       id: 3,
-      component: null
+      component: <Policy content={universityPolicy} />
     },
     'الرؤيا والرسالة': {
       id: 4,
-      component: <Vision content={data?.Vision_And_Message}/>
+      component: <Vision content={visionAndMission} />
     },
+    'شعار الجامعة': {
+      id: 5,
+      component: <Slogan content={UniversitySlogan} />
+    },
+    'الخطة الإستراتيجية': {
+      id: 6,
+      component: <Plan content={StrategicPlan} />
+    },
+    'مخطط تنظيمي': {
+      id: 7,
+      component: <Chart content={OrganizationalChart} />
+    },
+    'إدارة الجامعة': {
+      id: 8,
+      component: <Administration content={UniversityAdministration} />
+    },
+    'المكاتب والأقسام': {
+      id: 9,
+      component: <Offices content={OfficesAndDepartments} />
+    },
+    الاعتمادية: {
+      id: 10,
+      component: <Depend content={Dependability} />
+    }
   }
   return (
     <div>
       {' '}
       <Tab.Group>
-        <div className='flex flex-col-reverse gap-10 lg:flex-row lg:gap-0'>
+        <div className='flex flex-col gap-10 lg:flex-row lg:gap-0'>
           <Tab.List className='rounded-xlpx-5 flex w-72 flex-col space-x-1'>
             {Object.keys(categories).map(category => (
               <Tab

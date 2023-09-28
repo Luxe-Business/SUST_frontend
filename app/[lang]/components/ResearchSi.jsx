@@ -1,53 +1,107 @@
 import React from 'react'
+import { getFeaturedResearch } from '@/app/libs/getAllData'
+import parse from 'html-react-parser'
+import Link from 'next/link'
 
-const ResearchSi = () =>  {
+const ResearchSi = async ({ lg }) => {
+  const FeaturedResearches = await getFeaturedResearch(lg)
+
+  const getResearchImageFunction = research => {
+    if (
+      FeaturedResearches.length == 0 ||
+      research.attributes.image.data == null
+    ) {
+      return 'https://via.placeholder.com/350x150'
+    } else {
+      return research.attributes.image.data.attributes.formats.large.url
+    }
+  }
+
   return (
-    <main className="my-8">
-      <h2 className='mb-12 text-center text-5xl font-medium'>قائمة البحوث العلمية</h2>
+    <main className='my-8'>
+      <h2 className='mb-12 text-center text-5xl font-medium'>
+        قائمة البحوث العلمية
+      </h2>
 
-    <div className="container mx-auto px-6">
-        <div className="h-64 rounded-md overflow-hidden bg-cover bg-center" style={{backgroundImage: " url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144')"}}>
-            <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
-                <div className="px-10 max-w-xl">
-                    <h2 className="text-2xl text-white font-semibold">List of scientific research</h2>
-                    <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                    <button className="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                        <span>Show More</span>
-                        <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </button>
-                </div>
+      <div className='container mx-auto px-6'>
+        <div
+          className='h-64 overflow-hidden rounded-md bg-cover bg-center'
+          style={{
+            backgroundImage:
+              " url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1280&q=144')"
+          }}
+        >
+          <div className='flex h-full items-center bg-gray-900 bg-opacity-50'>
+            <div className='max-w-xl px-10'>
+              <h2 className='text-2xl font-semibold text-white'>
+                List of scientific research
+              </h2>
+              <p className='mt-2 text-gray-400'>
+                العديد من الإكتشافات العظيمة على بعد نقرة
+              </p>
+              <Link
+                className='mt-4 flex items-center rounded text-sm font-medium uppercase text-white hover:underline focus:outline-none'
+                href={`/ar/research/`}
+              >
+                <span>Show More</span>
+                <svg
+                  className='mx-2 h-5 w-5'
+                  fill='none'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth='2'
+                  viewBox='0 0 24 24'
+                  stroke='currentColor'
+                >
+                  <path d='M17 8l4 4m0 0l-4 4m4-4H3'></path>
+                </svg>
+              </Link>
             </div>
+          </div>
         </div>
-        <div className="md:flex mt-8 md:-mx-4"> 
-            <div className="w-full h-64 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2" style={{backgroundImage: "url('https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')"}}>
-                <div className="bg-gray-900 bg-opacity-50 flex    items-center h-full">
-                    <div className="px-10 max-w-xl">
-                        <h2 className="text-2xl text-white font-semibold">research 1 </h2>
-                        <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                        <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
-                            <span>Show More</span>
-                            <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </button>
-                    </div>
+
+        <div className='mt-8 flex flex-col gap-3 md:-mx-4'>
+          {FeaturedResearches.map(research => (
+            <div
+              key={research.id}
+              className='h-64 w-full overflow-hidden rounded-md bg-cover bg-center md:mx-4 md:w-1/2'
+              style={{
+                backgroundImage: `url(${getResearchImageFunction(research)})`
+              }}
+            >
+              <div className='flex h-full items-center    bg-gray-900 bg-opacity-50'>
+                <div className='max-w-xl px-10'>
+                  <h2 className='text-2xl font-semibold text-white'>
+                    {research.attributes.Title}
+                  </h2>
+                  <div className='mt-2 text-gray-400'>
+                    {parse(research.attributes.Content)}
+                  </div>
+
+                  <Link
+                    className='mt-4 flex items-center rounded text-sm font-medium uppercase text-white hover:underline focus:outline-none'
+                    href={`/ar/research/${research.id}`}
+                  >
+                    <span>Show More</span>
+                    <svg
+                      className='mx-2 h-5 w-5'
+                      fill='none'
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth='2'
+                      viewBox='0 0 24 24'
+                      stroke='currentColor'
+                    >
+                      <path d='M17 8l4 4m0 0l-4 4m4-4H3'></path>
+                    </svg>
+                  </Link>
                 </div>
+              </div>
             </div>
-            <div className="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0 md:w-1/2" style={{backgroundImage: " url('https://images.unsplash.com/photo-1486401899868-0e435ed85128?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80')"}}>
-                <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
-                    <div className="px-10 max-w-xl">
-                        <h2 className="text-2xl text-white font-semibold">research 2</h2>
-                        <p className="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                        <button className="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
-                            <span>Show More</span>
-                            <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        </button>
-                    </div>
-                </div>
-            </div>
+          ))}
         </div>
-      
-        
-    </div>
-</main>
+      </div>
+    </main>
   )
 }
 

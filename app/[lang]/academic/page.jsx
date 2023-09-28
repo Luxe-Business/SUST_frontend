@@ -8,9 +8,8 @@ export default async function AcademicPage({ params: { lang } }) {
   } = await getDictionary(lang)
 
   return (
-    <div className="w-full container">
-        <Academic  />
+    <div className='container w-full'>
+      <Academic lang={lang} />
     </div>
   )
 }
-

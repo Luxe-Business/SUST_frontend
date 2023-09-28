@@ -1,30 +1,30 @@
 'use client'
 import Link from 'next/link'
-import React, { useState,useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
-import { fetchData } from '@/app/api/route';
+import { fetchData } from '@/app/api/route'
 
-const Nav = ({ lang, navigation }) => {
+const Nav = ({ lang, navigation, collegesData }) => {
   const [isOpen, setIsOpen] = useState(false)
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
   }
 
-  const [data, setData] = useState(null);
+  // const [data, setData] = useState(null);
 
-  useEffect(() => {
-    async function getData() {
-      const fetchedData = await fetchData(lang, 'colleges-and-institutes');
-      setData(fetchedData);
-    }
-    getData();
-  }, [lang]);
+  // useEffect(() => {
+  //   async function getData() {
+  //     const fetchedData = await fetchData(lang, 'colleges-and-institutes');
+  //     setData(fetchedData);
+  //   }
+  //   getData();
+  // }, [lang]);
 
   const hospitalMenuItems = navigation.subhospital
 
   return (
     <div className='hidden h-[100px] w-fit items-center justify-between text-lg font-[700] leading-7 lg:flex '>
-     { data?.Title}
+      {/* { data?.Title} */}
       <li className='block bg-[#019FF8]  py-8 text-white '>
         <Link
           className='relative block px-4 py-8 font-bold  lg:p-4'
@@ -68,7 +68,7 @@ const Nav = ({ lang, navigation }) => {
       <li className='block   py-8   hover:bg-[#019FF8] hover:text-white '>
         <Link
           className='relative block px-4 py-8 font-bold  lg:p-4'
-          href={`/${lang}`}
+          href={`/${lang}/student-life`}
         >
           {navigation.life}
         </Link>
@@ -88,14 +88,13 @@ const Nav = ({ lang, navigation }) => {
           {isOpen && (
             <div className='absolute right-0 z-10 mt-2 w-48 rounded-md bg-white py-2 shadow-xl'>
               <div className=''>
-                {hospitalMenuItems.map(([label, value], index, href) => (
-                  <div key={index}>
+                {collegesData.map(subCollege => (
+                  <div key={subCollege.id}>
                     <Link
-                      href={`/${lang}/Colleges/${label}`}
+                      href={`/${lang}/Colleges/${subCollege.id}`}
                       className='block px-4 py-2  text-gray-700 hover:bg-[#2386C8] '
                     >
-                      {' '}
-                      {value}
+                      {subCollege.attributes.Title}
                     </Link>
                   </div>
                 ))}

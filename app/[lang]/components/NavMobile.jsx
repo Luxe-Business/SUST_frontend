@@ -20,16 +20,16 @@ const NavMobile = ({ lang, navigation }) => {
         className={`${
           isOpen ? 'right-0' : 'right-full'
         } fixed top-0 flex h-screen w-full flex-col items-center justify-center space-y-8
-          bg-[#019FF8] text-lg transition-all`}
+          bg-[#019FF8af] text-lg transition-all`}
       >
         {/* close button */}
         <button className='absolute left-6 top-6'>
           <AiOutlineClose size={22} onClick={() => setisOpen(false)} />
         </button>
-        <div className=' h-[92px] w-fit items-center justify-between text-lg font-[700] leading-7 lg:flex '>
-          <li className='block    text-white hover:bg-[#019FF8] '>
+        <div className=' flex  w-fit flex-col items-center justify-between gap-5 text-lg font-[700] leading-7 '>
+          <li className='block     text-white hover:bg-[#019FF8]'>
             <Link
-              className='relative block px-4 py-2 font-bold  lg:p-4'
+              className='relative block px-4  font-bold  lg:p-4'
               href={`/${lang}`}
             >
               {navigation.home}
@@ -37,7 +37,7 @@ const NavMobile = ({ lang, navigation }) => {
           </li>
           <li className='block    hover:bg-[#019FF8] hover:text-white '>
             <Link
-              className='relative block px-4 py-2 font-bold  lg:p-4'
+              className='relative block px-4  font-bold  lg:p-4'
               href={`/${lang}/about`}
             >
               {navigation.about}
@@ -45,23 +45,23 @@ const NavMobile = ({ lang, navigation }) => {
           </li>
           <li className='block    hover:bg-[#019FF8] hover:text-white '>
             <Link
-              className='relative block px-4 py-2 font-bold  lg:p-4'
+              className='relative block px-4  font-bold  lg:p-4'
               href={`/${lang}`}
             >
               {navigation.colleges}
             </Link>
           </li>
-          <li className='block   py-4  hover:bg-[#019FF8] hover:text-white '>
+          <li className='block   hover:bg-[#019FF8] hover:text-white '>
             <Link
-              className='relative block px-4 py-8 font-bold  lg:p-4'
+              className='relative block px-4  font-bold  lg:p-4'
               href={`/${lang}/academic`}
             >
               {navigation.academic}
             </Link>
           </li>
-          <li className='block   py-4  hover:bg-[#019FF8] hover:text-white '>
+          <li className='block    hover:bg-[#019FF8] hover:text-white '>
             <Link
-              className='relative block px-4 py-8 font-bold  lg:p-4'
+              className='relative block px-4 font-bold  lg:p-4'
               href={`/${lang}/research`}
             >
               {navigation.research}
@@ -69,7 +69,7 @@ const NavMobile = ({ lang, navigation }) => {
           </li>
           <li className='block    hover:bg-[#019FF8] hover:text-white '>
             <Link
-              className='relative block px-4 py-2 font-bold  lg:p-4'
+              className='relative block px-4 font-bold  lg:p-4'
               href={`/${lang}`}
             >
               {navigation.life}

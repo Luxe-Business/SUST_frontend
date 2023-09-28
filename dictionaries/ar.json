@@ -1,107 +1,104 @@
 {
-    "navigation": {
-      "home": "الرئيسية",
-      "about": "حول الجامعة",
-      "colleges":"الكليات والمعاهد",
-      "academic":"الشؤون الأكاديمية",
-      "research":"البحث العلمي",
-      "life":"الحياة الطلابية",
-      "hospital":"المشفى الجامعية",
-      "subhospital":[
-        ["CollegeOfEngineering","كلية الهندسة","CollegeOfEngineering"],
-        ["CollegeOfEngineering","  كلية الطب" ],
-        ["CollegeOfEngineering","كلية التجارة  " ],
-        ["CollegeOfEngineering","كلية طب الأسنان  " ],
-        ["CollegeOfEngineering","كلية  الحقوق " ]
-
-         ]
-
-    },
-    "hero": {
-      "title": "الصفحة الرئيسية الجامعة",
-      "description": "وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر"
-    },
-    "page": {
-      "home": {
-        "title": "test test test test",
-        "description": "test im test 13 test-test",
-        "lastNews": {
-          "title": "آخر الأخبار",
-          "news1": {
-            "title": "خبر رقم 1",
-            "description": "تم نشره بتاريخ",
-            "date": "13.09.2023"
-          },
-          "news2": {
-            "title": "خبر رقم 2",
-            "description": "تم نشره بتاريخ",
-            "date": "12.09.2023"
-          },
-          "news3": {
-            "title": "خبر رقم 3",
-            "description": "تم نشره بتاريخ",
-            "date": "10.09.2023"
-          }
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "حول الجامعة",
+    "colleges": "الكليات والمعاهد",
+    "academic": "الشؤون الأكاديمية",
+    "research": "البحث العلمي",
+    "life": "الحياة الطلابية",
+    "hospital": "المشفى الجامعية",
+    "subhospital": [
+      ["CollegeOfEngineering", "كلية الهندسة", "CollegeOfEngineering"],
+      ["CollegeOfEngineering", "  كلية الطب"],
+      ["CollegeOfEngineering", "كلية التجارة  "],
+      ["CollegeOfEngineering", "كلية طب الأسنان  "],
+      ["CollegeOfEngineering", "كلية  الحقوق "]
+    ]
+  },
+  "hero": {
+    "title": "الصفحة الرئيسية الجامعة",
+    "description": "وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر"
+  },
+  "page": {
+    "home": {
+      "title": "test test test test",
+      "description": "test im test 13 test-test",
+      "lastNews": {
+        "title": "آخر الأخبار",
+        "news1": {
+          "title": "خبر رقم 1",
+          "description": "تم نشره بتاريخ",
+          "date": "13.09.2023"
         },
-          "stats":{
-            "title":"مخطط احصائيات الجامعة",
-            "counterSt":"عدد طلاب الجامعة",
-            "CounterGS":"خريجو الجامعة",
-            "CounterHi":"خريجو الدراسات العليا",
-            "CounterStHi":"طلاب الدراسات العليا"
-          },
-          "cuntactus": {
-            "title":"تواصل معنا",
-            "subTitle":"دعونا نتحدث عن كل شيء!",
-            "fullName":"الأسم كامل",
-            "mail":"البريد الألكتروني",
-            "message":"الرسالة",
-            "sendMessage":"ارسال رسالة"
-          },
-        "activities": {
-          "title": "آخر الفعاليات",
-          "activity1": {
-            "title": "فعالية رقم 1",
-            "description": "تمت بتاريخ",
-            "date": "13.09.2023"
-          },
-          "activity2": {
-            "title": "فعالية رقم 2",
-            "description": "تمت بتاريخ",
-            "date": "12.09.2023"
-          },
-          "activity3": {
-            "title": "فعالية رقم 3",
-            "description": "تمت بتاريخ",
-            "date": "10.09.2023"
-          }
+        "news2": {
+          "title": "خبر رقم 2",
+          "description": "تم نشره بتاريخ",
+          "date": "12.09.2023"
+        },
+        "news3": {
+          "title": "خبر رقم 3",
+          "description": "تم نشره بتاريخ",
+          "date": "10.09.2023"
         }
       },
-      "about": {
-        "title": "test uns",
-        "description": "test ist die test-test"
+      "stats": {
+        "title": "مخطط احصائيات الجامعة",
+        "counterSt": "عدد طلاب الجامعة",
+        "CounterGS": "خريجو الجامعة",
+        "CounterHi": "خريجو الدراسات العليا",
+        "CounterStHi": "طلاب الدراسات العليا"
       },
-      "news": {
-        "title": "صفحة جميع الأخبار"
+      "cuntactus": {
+        "title": "تواصل معنا",
+        "subTitle": "دعونا نتحدث عن كل شيء!",
+        "fullName": "الأسم كامل",
+        "mail": "البريد الألكتروني",
+        "message": "الرسالة",
+        "sendMessage": "ارسال رسالة"
+      },
+      "activities": {
+        "title": "آخر الفعاليات",
+        "activity1": {
+          "title": "فعالية رقم 1",
+          "description": "تمت بتاريخ",
+          "date": "13.09.2023"
+        },
+        "activity2": {
+          "title": "فعالية رقم 2",
+          "description": "تمت بتاريخ",
+          "date": "12.09.2023"
+        },
+        "activity3": {
+          "title": "فعالية رقم 3",
+          "description": "تمت بتاريخ",
+          "date": "10.09.2023"
+        }
       }
-   
-    } ,
-    "footer": {
-      "community": "المجتمع",
-      "about": "عن الجامعة",
-      "colleges": "الكليات والمعاهد",
-      "academic": "الشؤون الأكاديمية",
-      "research": "البحث العلمي",
-      "life": "حياة الطلاب",
-      "hospital": "المستشفى",
-      "resources": "الموارد",
-      "accessibility": "سهولة الوصول",
-      "usability": "سهولة الاستخدام",
-      "allright": "جميع الحقوق محفوظة © 2023",
-      "terms": "شروط الخدمة",
-      "privacy": "سياسة الخصوصية",
-      "security": "الأمان",
-      "sitemap": "خريطة الموقع"
+    },
+    "about": {
+      "title": "test uns",
+      "description": "test ist die test-test"
+    },
+    "news": {
+      "title": "صفحة جميع الأخبار"
     }
+  },
+  "footer": {
+    "community": "المجتمع",
+    "about": "عن الجامعة",
+    "colleges": "الكليات والمعاهد",
+    "academic": "الشؤون الأكاديمية",
+    "research": "البحث العلمي",
+    "studentLife": "الحياة الطلابية",
+    "life": "حياة الطلاب",
+    "hospital": "المستشفى",
+    "resources": "الموارد",
+    "accessibility": "سهولة الوصول",
+    "usability": "سهولة الاستخدام",
+    "allright": "جميع الحقوق محفوظة © 2023",
+    "terms": "شروط الخدمة",
+    "privacy": "سياسة الخصوصية",
+    "security": "الأمان",
+    "sitemap": "خريطة الموقع"
   }
-  
+}

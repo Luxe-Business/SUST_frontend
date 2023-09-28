@@ -2,15 +2,29 @@ import Image from 'next/image'
 import React from 'react'
 import { getDictionary } from '@/lib/dictionary'
 import SocialMedia from './SocialMedia'
-async function Hero({lang}) {
+
+import { getPageSettings } from '@/app/libs/getAllData'
+
+async function Hero({ lang }) {
   const { hero } = await getDictionary(lang)
+  const pageSettingsData = await getPageSettings(lang)
+  const getHeroImageFunction = () => {
+    if (pageSettingsData.length == 0) {
+      return 'https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg'
+    } else {
+      return pageSettingsData[0].attributes.cover_image.data.attributes.formats
+        .large.url
+    }
+  }
+
+  const HeroImage = getHeroImageFunction()
 
   return (
     <div
       className='relative overflow-hidden bg-cover bg-no-repeat'
       style={{
         backgroundPosition: '50%',
-        backgroundImage: `url(https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg)`,
+        backgroundImage: `url(${HeroImage})`,
         height: '700px'
       }}
     >
@@ -18,13 +32,20 @@ async function Hero({lang}) {
         <div className='flex h-full items-center justify-center'>
           <div className='px-6 text-center text-white md:px-12'>
             <h1 className='mb-10 mt-2 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl'>
-            {hero.title} <br />
+              {pageSettingsData.length == 0
+                ? ''
+                : pageSettingsData[0].attributes.Cover_Title}{' '}
+              <br />
             </h1>
-         <p className="lg:px-64">{hero.description}</p>
+            <p className='lg:px-64'>
+              {pageSettingsData.length == 0
+                ? ''
+                : pageSettingsData[0].attributes.Cover_Descreption}
+            </p>
           </div>
         </div>
       </div>
-      <SocialMedia/>
+      <SocialMedia pageSettingsData={pageSettingsData} lang={lang} />
     </div>
   )
 }

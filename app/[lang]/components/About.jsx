@@ -1,25 +1,25 @@
-import university from "./images/university.jpg";
-import Image from "next/image"
+import university from './images/university.jpg'
+import Image from 'next/image'
+import parse from 'html-react-parser'
 export default function About({ content }) {
   return (
     <section>
       <div className='flex flex-wrap'>
         <div className='w-2/5 px-5'>
+          {content ? parse(content) : 'Loading...'}
+        </div>
+        {/* <div>
           <Image
             width={200}
             height={200}
             className='w-full rounded-md'
             src={university}
-            alt=""
+            alt=''
           />
         </div>
+        <div className='w-3/5 px-5 text-xl'></div>
         <div className='w-3/5 px-5 text-xl'>
-        {/* {content ? <div dangerouslySetInnerHTML={{ __html: content }} /> : 'Loading...'} */}
-      </div>
-        <div className='w-3/5 px-5 text-xl'>
-          <p className='mb-4'>
-          
-          </p>
+          <p className='mb-4'></p>
           <p>
             تم افتتاح كلية الطب في الجامعة الإسلامية عام 2006 م، وجاء افتتاحها
             بعد فترة مخاض دامت أكثر من عشر سنوات جرى خلالها إعداد البنية التحتية
@@ -31,9 +31,8 @@ export default function About({ content }) {
             وطبيبة، كانوا من خيرة الطلبة الذين باتوا قادة العمل الطبي في قطاع
             غزة ولهم بصمات مشهودة في مختلف الدول العربية والأجنبية.
           </p>
-        </div>
+        </div> */}
       </div>
-      <p></p>
     </section>
   )
 }

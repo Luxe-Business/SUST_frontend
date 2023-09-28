@@ -1,51 +1,141 @@
-"use client"
-import React from 'react';
-import { useState,useEffect } from 'react';
-const UniversityStatistics = ({page}) => {
-  const {home: {stats}} = page;
-  const [counter,setCounter]=useState(0)
-  useEffect(()=>{
-    const interval = setInterval(()=>{
-      if(counter <7645){
-        setCounter((prevCount)=>prevCount +10)
-      } else {
-        clearInterval(interval)
-      }
-    },1);
-    return ()=>clearInterval(interval)
-  },[counter])
+'use client'
+import React from 'react'
+// import { useState, useEffect } from 'react'
+import { useSpring, animated } from 'react-spring'
+
+function Counter({ n }) {
+  const { number } = useSpring({
+    from: { number: 0 },
+    number: n,
+    delay: 0,
+    config: { mass: 1, tension: 20, friction: 10 }
+  })
   return (
-    <section  className=" py-56 px-10 rounded-lg">
-      <div className="container mx-auto">
-        <h2 className="text-4xl text-center font-bold text-black mb-4">{stats.title}</h2>
-        <div className="flex justify-between p-4 items-center">
-          <div className=" p-8 border-2 transform hover:scale-105 border-white flex items-center rounded-lg shadow-md">
-            <div className='flex justify-center items-center flex-col'>
-              <p className="text-[#2386C8] text-center text-xl m-1 font-semibold">{stats.counterSt}</p>
-              <p className=" text-[#204157] text-center text-xl m-1 font-semibold">{`${counter+233}`}</p>
+    <animated.p className='m-1 text-center text-xl font-semibold text-[#204157]'>
+      {number.to(n => n.toFixed(0))}
+    </animated.p>
+  )
+}
+
+const UniversityStatistics = ({
+  page,
+
+  studenstNumber,
+  postGraduateNumber,
+  universityGraduatesNumber,
+  postGraduateGraduatesNumber
+}) => {
+  const {
+    home: { stats }
+  } = page
+  // const [studentsCounter, setStudentsCounter] = useState(studenstNumber)
+
+  // const [postgraduatesCounter, setPostgraduatesCounter] =
+  //   useState(postGraduateNumber)
+  // const [graduatesCounter, setGraduatesCounter] = useState(
+  //   universityGraduatesNumber
+  // )
+  // const [postGrGraduatesCounter, setPostGrGraduatesCounter] = useState(
+  //   postGraduateGraduatesNumber
+  // )
+
+  // useEffect(() => {
+  //   const studentsinterval = setInterval(() => {
+  //     if (studentsCounter < studenstNumber) {
+  //       setStudentsCounter(prevCount => prevCount + 1000)
+  //     } else {
+  //       clearInterval(studentsinterval)
+  //     }
+  //   }, 1)
+  //   const postgraduatesInterval = setInterval(() => {
+  //     if (postgraduatesCounter < postGraduateNumber) {
+  //       setPostgraduatesCounter(prevCount => prevCount + 1000)
+  //     } else {
+  //       clearInterval(postgraduatesInterval)
+  //     }
+  //   }, 1)
+  //   const graduatesInterval = setInterval(() => {
+  //     if (graduatesCounter < universityGraduatesNumber) {
+  //       setGraduatesCounter(prevCount => prevCount + 1000)
+  //     } else {
+  //       clearInterval(graduatesInterval)
+  //     }
+  //   }, 1)
+  //   const postGrGraduatesInterval = setInterval(() => {
+  //     if (postGrGraduatesCounter < postGraduateGraduatesNumber) {
+  //       setPostGrGraduatesCounter(prevCount => prevCount + 1000)
+  //     } else {
+  //       clearInterval(postGrGraduatesInterval)
+  //     }
+  //   }, 100)
+  //   // return () =>
+  //   //   clearInterval(
+  //   //     studentsinterval,
+  //   //     postgraduatesInterval,
+  //   //     graduatesInterval,
+  //   //     postGrGraduatesInterval
+  //   //   )
+  // }, [
+  //   studentsCounter,
+  //   studenstNumber,
+  //   postGrGraduatesCounter,
+  //   postGraduateGraduatesNumber,
+  //   graduatesCounter,
+  //   universityGraduatesNumber,
+  //   postgraduatesCounter,
+  //   postGraduateNumber
+  // ])
+
+  return (
+    <section className=' rounded-lg px-10 py-56'>
+      <div className='container mx-auto'>
+        <h2 className='mb-4 text-center text-4xl font-bold text-black'>
+          {stats.title}
+        </h2>
+        <div className='flex flex-col items-center justify-between gap-4 p-4 md:flex-row'>
+          <div className=' flex transform items-center rounded-lg border-2 border-white p-8 shadow-md hover:scale-105'>
+            <div className='flex flex-col items-center justify-center'>
+              <p className='m-1 text-center text-xl font-semibold text-[#2386C8]'>
+                {stats.counterSt}
+              </p>
+              <div>
+                <Counter n={studenstNumber} />
+              </div>
             </div>
           </div>
-          <div className=" p-8 border-2 transform hover:scale-105 border-white flex items-center rounded-lg shadow-md">
+          <div className=' flex transform items-center rounded-lg border-2 border-white p-8 shadow-md hover:scale-105'>
             <div>
-              <p className="text-[#2386C8] text-center text-xl m-1 font-semibold">{stats.CounterGS}</p>
-              <p className="text-[#204157] text-center text-xl m-1 font-semibold">{counter-200}</p>
+              <p className='m-1 text-center text-xl font-semibold text-[#2386C8]'>
+                {stats.CounterGS}
+              </p>
+              <div>
+                <Counter n={postGraduateNumber} />
+              </div>
             </div>
           </div>
-          <div className=" p-8 border-2 transform hover:scale-105 border-white flex items-center rounded-lg shadow-md">
+          <div className=' flex transform items-center rounded-lg border-2 border-white p-8 shadow-md hover:scale-105'>
             <div>
-              <p className="text-[#2386C8] text-center text-xl m-1 font-semibold">{stats.CounterStHi}</p>
-              <p className="text-[#204157] text-center text-xl m-1 font-semibold">{counter}</p>
+              <p className='m-1 text-center text-xl font-semibold text-[#2386C8]'>
+                {stats.CounterStHi}
+              </p>
+              <div>
+                <Counter n={universityGraduatesNumber} />
+              </div>
             </div>
           </div>
-          <div className=" p-8 border-2 transform hover:scale-105 border-white flex items-center rounded-lg shadow-md">
+          <div className=' flex transform items-center rounded-lg border-2 border-white p-8 shadow-md hover:scale-105'>
             <div>
-              <p className="text-[#2386C8] text-center text-xl m-1 font-semibold">{stats.CounterHi}</p>
-              <p className="text-[#204157] text-center text-xl m-1 font-semibold">{counter-1000}</p>
+              <p className='m-1 text-center text-xl font-semibold text-[#2386C8]'>
+                {stats.CounterHi}
+              </p>
+              <div>
+                <Counter n={postGraduateGraduatesNumber} />
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
-export default UniversityStatistics;
+  )
+}
+export default UniversityStatistics
