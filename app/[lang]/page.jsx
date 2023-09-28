@@ -43,16 +43,16 @@ export default async function Home({ params: { lang } }) {
       <UniversityStatistics
         page={page}
         studenstNumber={
-          pageSettingsData[0].attributes.Number_of_university_students
+          pageSettingsData[0]?.attributes.Number_of_university_students
         }
         postGraduateNumber={
-          pageSettingsData[0].attributes.postgraduate_students
+          pageSettingsData[0]?.attributes.postgraduate_students
         }
         universityGraduatesNumber={
-          pageSettingsData[0].attributes.university_graduates
+          pageSettingsData[0]?.attributes.university_graduates
         }
         postGraduateGraduatesNumber={
-          pageSettingsData[0].attributes.postgraduate_graduates
+          pageSettingsData[0]?.attributes.postgraduate_graduates
         }
       />
       <ResearchSi lg={lang} />

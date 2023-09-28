@@ -5,7 +5,8 @@ const nextConfig = {
       'images.unsplash.com',
       'mdbcdn.b-cdn.net',
       'ambitious-warmth-a158024e45.media.strapiapp.com',
-      'via.placeholder.com'
+      'via.placeholder.com',
+      'tuk-cdn.s3.amazonaws.com'
     ]
   }
 }

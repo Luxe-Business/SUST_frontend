@@ -17,23 +17,23 @@ export default async function Example({ params: { lang } }) {
     )
   }
 
-  const aboutUniversity = pageSettingsData[0].attributes.About_university
+  const aboutUniversity = pageSettingsData[0]?.attributes.About_university
   const PrWelcomeMessage =
-    pageSettingsData[0].attributes.University_President_welcome_message
-  const universityPolicy = pageSettingsData[0].attributes.University_policy
-  const visionAndMission = pageSettingsData[0].attributes.Vision_and_mission
-  const UniversitySlogan = pageSettingsData[0].attributes.University_slogan
-  const StrategicPlan = pageSettingsData[0].attributes.strategic_plan
+    pageSettingsData[0]?.attributes.University_President_welcome_message
+  const universityPolicy = pageSettingsData[0]?.attributes.University_policy
+  const visionAndMission = pageSettingsData[0]?.attributes.Vision_and_mission
+  const UniversitySlogan = pageSettingsData[0]?.attributes.University_slogan
+  const StrategicPlan = pageSettingsData[0]?.attributes.strategic_plan
   const OrganizationalChart =
-    pageSettingsData[0].attributes.Organizational_Chart
+    pageSettingsData[0]?.attributes.Organizational_Chart
   const UniversityAdministration =
-    pageSettingsData[0].attributes.University_administration
+    pageSettingsData[0]?.attributes.University_administration
   const OfficesAndDepartments =
-    pageSettingsData[0].attributes.Offices_and_departments
-  const Dependability = pageSettingsData[0].attributes.Dependability
+    pageSettingsData[0]?.attributes.Offices_and_departments
+  const Dependability = pageSettingsData[0]?.attributes.Dependability
 
   const persImage =
-    pageSettingsData[0].attributes.president_image.data.attributes.formats
+    pageSettingsData[0]?.attributes.president_image.data?.attributes.formats
       .thumbnail.url
 
   return (
