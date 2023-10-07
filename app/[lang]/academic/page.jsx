@@ -3,13 +3,11 @@ import React from 'react'
 import Academic from '../components/Academic'
 
 export default async function AcademicPage({ params: { lang } }) {
-  const {
-    page: { news }
-  } = await getDictionary(lang)
+  const { pages } = await getDictionary(lang)
 
   return (
     <div className='container w-full'>
-      <Academic lang={lang} />
+      <Academic data={pages.academic} lang={lang} />
     </div>
   )
 }

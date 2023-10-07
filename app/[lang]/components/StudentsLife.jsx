@@ -3,7 +3,7 @@ import { getStudentLives } from '@/app/libs/getAllData'
 
 import parse from 'html-react-parser'
 
-async function StudentsLife({ lang }) {
+async function StudentsLife({ data, lang }) {
   const StudentsLifeData = await getStudentLives(lang)
 
   if (StudentsLifeData.length == 0) {
@@ -18,7 +18,7 @@ async function StudentsLife({ lang }) {
 
   return (
     <>
-      <h2 className='mb-2 text-3xl font-bold'>الحياة الجامعية</h2>
+      <h2 className='mb-2 text-3xl font-bold'>{data.headTitle}</h2>
 
       {StudentsLifeData.map(studentLife => (
         <div key={studentLife.id}>

@@ -1,6 +1,6 @@
 import { getDictionary } from '@/lib/dictionary'
 import React from 'react'
-import Research from '../components/Research'
+
 import StudentsLife from '../components/StudentsLife'
 
 export default async function StudentLifePage({ params: { lang } }) {
@@ -8,9 +8,11 @@ export default async function StudentLifePage({ params: { lang } }) {
   //   page: { news }
   // } = await getDictionary(lang)
 
+  const { pages } = await getDictionary(lang)
+
   return (
     <div className='container w-full'>
-      <StudentsLife lang={lang} />
+      <StudentsLife data={pages.student_life} lang={lang} />
     </div>
   )
 }

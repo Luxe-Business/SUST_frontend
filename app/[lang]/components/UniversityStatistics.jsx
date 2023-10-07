@@ -26,7 +26,7 @@ const UniversityStatistics = ({
   postGraduateGraduatesNumber
 }) => {
   const {
-    home: { stats }
+    sections: { stats }
   } = page
   // const [studentsCounter, setStudentsCounter] = useState(studenstNumber)
 

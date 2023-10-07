@@ -6,88 +6,80 @@
     "academic": "Akademik İşler",
     "research": "Bilimsel Araştırma",
     "life": "Öğrenci Hayatı",
-    "hospital": "hospital",
-    "subhospital": [
-      [
-        "subhospital",
-        "subhospital"
-      ],
-      [
-        "subhospital2",
-        "subhospital"
-      ],
-      [
-        "subhospital3",
-        "subhospital"
-      ]
-    ]
+    "hospital": "hospital"
   },
-  "hero": {
-    "title": "Üniversite haberleri",
-    "description": "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500"
-  },
-  "page": {
+
+  "pages": {
     "home": {
-      "title": "Willkommen bei NextJs i18n",
-      "description": "Internationalisierung im NextJs 13 App-Router",
-      "lastNews": {
-        "title": "Son Haberler",
-        "news1": {
-          "title": "Haber No.1",
-          "description": "Yayınlanan",
-          "date": "13.09.2023"
+      "title": "Ana Sayfa",
+      "description": "test im test 13 test-test",
+      "sections": {
+        "lastNews": "Son Haberler",
+        "stats": {
+          "title": "Üniversite istatistik tablosu",
+          "counterSt": "Üniversite öğrencisi sayısı",
+          "CounterGS": "Üniversite mezunları",
+          "CounterHi": "Lisansüstü öğrenciler",
+          "CounterStHi": "Mezun öğrenciler"
         },
-        "news2": {
-          "title": "Haber No.2",
-          "description": "Yayınlanan",
-          "date": "12.09.2023"
+        "activities": "Son Etkinlikler",
+        "research": {
+          "title": "Araştırma Lisansüstü Çalışmaları",
+          "subTitle": "Bilimsel araştırmaların listesi",
+          "paragraph": "Birçok harika keşif sadece bir tık uzakta",
+          "cta": "Daha fazla göster"
         },
-        "news3": {
-          "title": "Haber No.3",
-          "description": "Yayınlanan",
-          "date": "10.09.2023"
-        }
-      },
-      "stats": {
-        "title": "Üniversite istatistik tablosu",
-        "counterSt": "Üniversite öğrencisi sayısı",
-        "CounterGS": "Üniversite Mezunları",
-        "CounterHi": "Lisansüstü Öğrenciler",
-        "CounterStHi": "Lisansüstü Öğrencileri"
-      },
-      "cuntactus": {
-        "title":"İletişim Formu",
-        "subTitle":"Hadi her şeyi konuşalım!",
-        "fullName":"TAM AD",
-        "mail":"POSTA",
-        "message":"MESAJ",
-        "sendMessage":"MESAJ GÖNDER"
-      },
-      "activities": {
-        "title": "Faaliyetler",
-        "activity1": {
-          "title": "Faaliyet No.1",
-          "description": "Yayınlanan",
-          "date": "13.09.2023"
-        },
-        "activity2": {
-          "title": "Faaliyet No.2",
-          "description": "Yayınlanan",
-          "date": "12.09.2023"
-        },
-        "activity3": {
-          "title": "Faaliyet No.3",
-          "description": "Yayınlanan",
-          "date": "10.09.2023"
+        "cuntactus": {
+          "title": "İletişim Formu",
+          "subTitle": "Hadi her şeyi konuşalım!",
+          "fullName": "TAM AD",
+          "mail": "POSTA",
+          "message": "MESAJ",
+          "sendMessage": "MESAJ GÖNDER"
         }
       }
     },
     "about": {
-      "title": "Über uns",
-      "description": "Dies ist die About-Seite"
+      "title": "Hakkımızda",
+      "description": "test ist die test-test",
+      "sections": {
+        "about_collage": "Üniversite hakkında",
+        "welcome_message": "Üniversite Rektörünün Hoş Geldiniz Mesajı",
+        "collage_policy": "Üniversite politikası",
+        "vision": "Vizyon ve misyon",
+        "collage_flag": "Üniversite logosu",
+        "startigic_plan": "Stratejik plan",
+        "chart": "Organizasyon şeması",
+        "collage_administration": "Üniversite yönetimi",
+        "offices": "Ofisler ve bölümler",
+        "reliability": "Güvenilirlik"
+      }
     },
     "news": {
-      "title": "Tüm Haberler Sayfası"
+      "title": "Tüm Haberler Sayfası",
+      "description": "test ist die test-test"
+    },
+    "hospital": {
+      "title": "üniversite Hastanesi",
+      "description": "test ist die test-test"
+    },
+    "academic": {
+      "title": "Akademik ilişkiler",
+      "description": "test ist die test-test"
+    },
+    "research": {
+      "title": "Araştırma Lisansüstü Çalışmaları",
+      "description": "test ist die test-test",
+      "headTitle": "Bilimsel Araştırmalar"
+    },
+    "student-life": {
+      "title": "Öğrenci hayatı",
+      "description": "test ist die test-test",
+      "headTitle": "Öğrenci hayatı"
+    },
+    "Colleges": {
+      "title": "Kolejler ve enstitüler",
+      "description": "test ist die test-test"
     }
   },
   "footer": {
@@ -105,6 +97,7 @@
     "terms": "Hizmet Şartları",
     "privacy": "Gizlilik Politikası",
     "security": "Güvenlik",
-    "sitemap": "Site Haritası"
+    "sitemap": "Site Haritası",
+    "name": "Suriye Bilim ve Teknoloji Üniversitesi"
   }
 }

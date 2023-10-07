@@ -46,15 +46,15 @@ export default async function Footer({ lang }) {
     <>
       <div className='relative  flex justify-start md:items-end md:justify-center '>
         <Image
-          className='absolute  top-10 z-0 h-full w-full object-cover xl:mt-10'
+          className='absolute  top-10 z-0 h-full w-full object-cover lg:object-fill xl:mt-10'
           src='https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png'
           alt='background'
           fill={true}
         />
         <div className='relative z-10 flex flex-col items-start   justify-start px-4  pt-36 md:items-center md:justify-center md:px-6 md:pt-32 lg:pt-40 xl:px-20 xl:pt-96'>
-          <div className='flex  flex-col items-start justify-start xl:flex-row xl:justify-center xl:space-x-8'>
-            <div className='flex items-center justify-start space-x-4'>
-              <div className='w-12 cursor-pointer'>
+          <div className='flex  flex-col items-start justify-between gap-5 xl:flex-row xl:justify-center xl:space-x-8'>
+            <div className='flex  items-center justify-start space-x-4'>
+              <div className='w-16 cursor-pointer self-start'>
                 <Image
                   src={logo}
                   width='180'
@@ -63,11 +63,11 @@ export default async function Footer({ lang }) {
                   alt='logo'
                 />
               </div>
-              <p className='w-60 text-xl font-semibold leading-normal text-white xl:text-2xl'>
-                Uinversity
+              <p className='w-60 text-lg font-semibold leading-normal text-white xl:text-2xl'>
+                {footer.name}
               </p>
             </div>
-            <div className='mt-12 grid w-full grid-cols-1 gap-y-12 sm:grid-cols-3 sm:gap-x-20 sm:gap-y-0 md:w-auto md:gap-x-28 xl:mt-0 xl:gap-8'>
+            <div className='mt-12 grid w-full grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-20 sm:gap-y-0 md:w-auto md:gap-x-28 xl:mt-0 xl:gap-8'>
               <div className='flex flex-col items-start justify-start space-y-6 sm:w-40 md:w-auto xl:w-72'>
                 <h2 className='text-base font-bold leading-4 text-white xl:text-xl xl:font-semibold xl:leading-5'>
                   {footer.community}
@@ -163,7 +163,7 @@ export default async function Footer({ lang }) {
               </div> */}
             </div>
           </div>
-          <div className='mt-12 flex  w-full flex-col-reverse items-center xl:flex-row xl:items-start xl:justify-between '>
+          <div className='mt-12 flex  w-full flex-col-reverse  items-center xl:flex-row  xl:justify-between '>
             <p className='mt-10 text-sm leading-none text-white md:mt-12 xl:mt-0'>
               {' '}
               {footer.allright}

@@ -4,11 +4,12 @@ import parse from 'html-react-parser'
 export default function About({ content }) {
   return (
     <section>
-      <div className='flex flex-wrap'>
-        <div className='w-2/5 px-5'>
-          {content ? parse(content) : 'Loading...'}
+      <div className=''>
+        <div className='text-xl'>
+          <div className='mb-4'>{content ? parse(content) : 'Loading...'}</div>
         </div>
-        {/* <div>
+      </div>
+      {/* <div>
           <Image
             width={200}
             height={200}
@@ -32,7 +33,6 @@ export default function About({ content }) {
             غزة ولهم بصمات مشهودة في مختلف الدول العربية والأجنبية.
           </p>
         </div> */}
-      </div>
     </section>
   )
 }

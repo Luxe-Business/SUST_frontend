@@ -29,12 +29,12 @@ export default async function Activities({ page, lg }) {
   }
 
   const {
-    home: { activities }
+    sections: { activities }
   } = page
   return (
     <section>
       <h2 className='mb-12 mt-24 text-center text-5xl font-medium'>
-        {activities.title}
+        {activities}
       </h2>
 
       <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>

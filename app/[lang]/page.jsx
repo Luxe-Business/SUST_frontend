@@ -8,7 +8,7 @@ import ResearchSi from './components/ResearchSi'
 import { getPageSettings } from '@/app/libs/getAllData'
 
 export default async function Home({ params: { lang } }) {
-  const { page } = await getDictionary(lang)
+  const { pages } = await getDictionary(lang)
 
   const pageSettingsData = await getPageSettings(lang)
   //  let error = false;
@@ -38,10 +38,10 @@ export default async function Home({ params: { lang } }) {
 
   return (
     <div className='container'>
-      <LastNews page={page} lg={lang} />
-      <Activities page={page} lg={lang} />
+      <LastNews page={pages.home} lg={lang} />
+      <Activities page={pages.home} lg={lang} />
       <UniversityStatistics
-        page={page}
+        page={pages.home}
         studenstNumber={
           pageSettingsData[0]?.attributes.Number_of_university_students
         }
@@ -55,8 +55,8 @@ export default async function Home({ params: { lang } }) {
           pageSettingsData[0]?.attributes.postgraduate_graduates
         }
       />
-      <ResearchSi lg={lang} />
-      <ContactUs page={page} lang={{ lang }} />
+      <ResearchSi page={pages.home} lg={lang} />
+      <ContactUs page={pages.home} lang={{ lang }} />
     </div>
   )
 }

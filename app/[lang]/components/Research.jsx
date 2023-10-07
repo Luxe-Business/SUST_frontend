@@ -10,7 +10,7 @@ import ContentLoader from 'react-content-loader'
 
 import { Card, CardHeader, Image } from '@nextui-org/react'
 
-export default function Research({ lang }) {
+export default function Research({ data, lang }) {
   const [researchData, setResearchData] = useState([])
   const [isLoading, setIsLoading] = useState(false)
 
@@ -40,7 +40,7 @@ export default function Research({ lang }) {
 
   return (
     <>
-      <h2 className='mb-2 text-3xl font-bold'>البحث العلمي </h2>
+      <h2 className='mb-2 text-3xl font-bold'>{data.headTitle}</h2>
       <hr className='mb-5' />
       <div className='grid max-w-[1400px] grid-cols-12 grid-rows-2 gap-2 px-8'>
         {isLoading && (
@@ -94,7 +94,7 @@ export default function Research({ lang }) {
               key={research.id}
               className='col-span-12 h-[450px] sm:col-span-4'
             >
-              <Link href={`/ar/research/${research.id}`}>
+              <Link href={`/${lang}/research/${research.id}`}>
                 <CardHeader className='absolute top-0 z-10 flex-col !items-start bg-blue-600/50'>
                   <h4 className='text-large font-bold  text-white'>
                     {research.attributes.Title}

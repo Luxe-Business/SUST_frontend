@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation'
 
 const Nav = ({ lang, navigation, collegesData }) => {
   const pathname = usePathname()
-  console.log(pathname)
+
   const [isOpen, setIsOpen] = useState(false)
   const toggleDropdown = () => {
     setIsOpen(!isOpen)
@@ -109,7 +109,7 @@ const Nav = ({ lang, navigation, collegesData }) => {
                 : ''
             }`
           }
-          href={`/${lang}/student-life`}
+          href={`/${lang}/student_life`}
         >
           {navigation.life}
         </Link>

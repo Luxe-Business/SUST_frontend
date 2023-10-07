@@ -10,7 +10,7 @@ const ContactUs = ({ page, lang }) => {
   const [isSuccessful, setIsSuccessful] = useState(false)
 
   const {
-    home: { cuntactus }
+    sections: { cuntactus }
   } = page
 
   const {
@@ -65,7 +65,7 @@ const ContactUs = ({ page, lang }) => {
               </h2>
               <div className='mt-8 text-gray-700'>
                 <iframe
-                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d855647.8021227241!2d35.62932982478066!3d33.099244124926784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151915cf4d42d5b7%3A0xf1ab4143108c25c5!2sInternational%20University%20for%20Science%20and%20Technology!5e0!3m2!1sen!2sae!4v1695063955583!5m2!1sen!2sae'
+                  src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.605133705095!2d37.065649699999994!3d36.6118181!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x152fc54304ad635f%3A0x5a46a1fc93f4a7d2!2z2KfZhNis2KfZhdi52Kkg2KfZhNiz2YjYsdmK2Kk!5e0!3m2!1sen!2s!4v1696494979628!5m2!1sen!2s'
                   width='100%'
                   height='400'
                   style={{

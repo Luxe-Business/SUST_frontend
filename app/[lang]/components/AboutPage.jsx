@@ -17,6 +17,7 @@ function classNames(...classes) {
 }
 
 function AboutPage({
+  data,
   persImage,
   aboutUniversity,
   PrWelcomeMessagey,
@@ -31,44 +32,54 @@ function AboutPage({
   lang
 }) {
   const categories = {
-    'عن الجامعة': {
+    about_collage: {
       id: 1,
+      title: data.about_collage,
       component: <About content={aboutUniversity} />
     },
-    'رسالة ترحيب رئيس الجامعة': {
+    welcome_message: {
       id: 2,
+      title: data.welcome_message,
       component: <Greeting content={PrWelcomeMessagey} image={persImage} />
     },
-    'سياسة الجامعة': {
+    collage_policy: {
       id: 3,
+      title: data.collage_policy,
       component: <Policy content={universityPolicy} />
     },
-    'الرؤيا والرسالة': {
+    vision: {
       id: 4,
+      title: data.vision,
       component: <Vision content={visionAndMission} />
     },
-    'شعار الجامعة': {
+    collage_flag: {
       id: 5,
+      title: data.collage_flag,
       component: <Slogan content={UniversitySlogan} />
     },
-    'الخطة الإستراتيجية': {
+    startigic_plan: {
       id: 6,
+      title: data.startigic_plan,
       component: <Plan content={StrategicPlan} />
     },
-    'مخطط تنظيمي': {
+    chart: {
       id: 7,
+      title: data.chart,
       component: <Chart content={OrganizationalChart} />
     },
-    'إدارة الجامعة': {
+    collage_administration: {
       id: 8,
+      title: data.collage_administration,
       component: <Administration content={UniversityAdministration} />
     },
-    'المكاتب والأقسام': {
+    offices: {
       id: 9,
+      title: data.offices,
       component: <Offices content={OfficesAndDepartments} />
     },
-    الاعتمادية: {
+    reliability: {
       id: 10,
+      title: data.reliability,
       component: <Depend content={Dependability} />
     }
   }
@@ -78,9 +89,9 @@ function AboutPage({
       <Tab.Group>
         <div className='flex flex-col gap-10 lg:flex-row lg:gap-0'>
           <Tab.List className='rounded-xlpx-5 flex w-72 flex-col space-x-1'>
-            {Object.keys(categories).map(category => (
+            {Object.values(categories).map(category => (
               <Tab
-                key={category}
+                key={category.id}
                 className={({ selected }) =>
                   classNames(
                     `w-full py-2.5 text-xl font-bold leading-5 text-black ${
@@ -91,7 +102,7 @@ function AboutPage({
                   )
                 }
               >
-                {category}
+                {category.title}
               </Tab>
             ))}
           </Tab.List>

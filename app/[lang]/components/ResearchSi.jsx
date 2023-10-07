@@ -3,7 +3,10 @@ import { getFeaturedResearch } from '@/app/libs/getAllData'
 import parse from 'html-react-parser'
 import Link from 'next/link'
 
-const ResearchSi = async ({ lg }) => {
+const ResearchSi = async ({ page, lg }) => {
+  const {
+    sections: { research }
+  } = page
   const FeaturedResearches = await getFeaturedResearch(lg)
 
   const getResearchImageFunction = research => {
@@ -20,7 +23,7 @@ const ResearchSi = async ({ lg }) => {
   return (
     <main className='my-8'>
       <h2 className='mb-12 text-center text-5xl font-medium'>
-        قائمة البحوث العلمية
+        {research.title}
       </h2>
 
       <div className='container mx-auto px-6'>
@@ -34,16 +37,14 @@ const ResearchSi = async ({ lg }) => {
           <div className='flex h-full items-center bg-gray-900 bg-opacity-50'>
             <div className='max-w-xl px-10'>
               <h2 className='text-2xl font-semibold text-white'>
-                List of scientific research
+                {research.subTitle}
               </h2>
-              <p className='mt-2 text-gray-400'>
-                العديد من الإكتشافات العظيمة على بعد نقرة
-              </p>
+              <p className='mt-2 text-gray-400'>{research.paragraph}</p>
               <Link
                 className='mt-4 flex items-center rounded text-sm font-medium uppercase text-white hover:underline focus:outline-none'
                 href={`/ar/research/`}
               >
-                <span>Show More</span>
+                <span>{research.cta}</span>
                 <svg
                   className='mx-2 h-5 w-5'
                   fill='none'
@@ -60,29 +61,31 @@ const ResearchSi = async ({ lg }) => {
           </div>
         </div>
 
-        <div className='mt-8 flex flex-col gap-3 md:-mx-4'>
-          {FeaturedResearches.map(research => (
+        <div className='mt-8 flex flex-col gap-3 md:-mx-4 md:flex-row'>
+          {FeaturedResearches.map(singleResearch => (
             <div
-              key={research.id}
+              key={singleResearch.id}
               className='h-64 w-full overflow-hidden rounded-md bg-cover bg-center md:mx-4 md:w-1/2'
               style={{
-                backgroundImage: `url(${getResearchImageFunction(research)})`
+                backgroundImage: `url(${getResearchImageFunction(
+                  singleResearch
+                )})`
               }}
             >
               <div className='flex h-full items-center    bg-gray-900 bg-opacity-50'>
                 <div className='max-w-xl px-10'>
                   <h2 className='text-2xl font-semibold text-white'>
-                    {research.attributes.Title}
+                    {singleResearch.attributes.Title}
                   </h2>
                   <div className='mt-2 text-gray-400'>
-                    {parse(research.attributes.Content)}
+                    {parse(singleResearch.attributes.Content)}
                   </div>
 
                   <Link
                     className='mt-4 flex items-center rounded text-sm font-medium uppercase text-white hover:underline focus:outline-none'
-                    href={`/ar/research/${research.id}`}
+                    href={`/${lg}/research/${singleResearch.id}`}
                   >
-                    <span>Show More</span>
+                    <span>{research.cta}</span>
                     <svg
                       className='mx-2 h-5 w-5'
                       fill='none'

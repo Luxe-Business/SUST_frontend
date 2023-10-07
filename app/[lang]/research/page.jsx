@@ -3,13 +3,11 @@ import React from 'react'
 import Research from '../components/Research'
 
 export default async function ResearchPage({ params: { lang } }) {
-  const {
-    page: { news }
-  } = await getDictionary(lang)
+  const { pages } = await getDictionary(lang)
 
   return (
     <div className='container w-full'>
-      <Research lang={lang} />
+      <Research data={pages.research} lang={lang} />
     </div>
   )
 }

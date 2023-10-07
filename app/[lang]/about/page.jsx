@@ -3,7 +3,7 @@ import { getDictionary } from '@/lib/dictionary'
 import { getPageSettings } from '@/app/libs/getAllData'
 
 export default async function Example({ params: { lang } }) {
-  const { page } = await getDictionary(lang)
+  const { pages } = await getDictionary(lang)
   const pageSettingsData = await getPageSettings(lang)
 
   // console.log(pageSettingsData)
@@ -39,6 +39,7 @@ export default async function Example({ params: { lang } }) {
   return (
     <div className='container w-full'>
       <AboutPage
+        data={pages.about.sections}
         lang={lang}
         aboutUniversity={aboutUniversity}
         PrWelcomeMessagey={PrWelcomeMessage}

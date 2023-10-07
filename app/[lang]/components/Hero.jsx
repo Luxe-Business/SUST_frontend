@@ -5,8 +5,41 @@ import SocialMedia from './SocialMedia'
 
 import { getPageSettings } from '@/app/libs/getAllData'
 
-async function Hero({ lang }) {
-  const { hero } = await getDictionary(lang)
+async function Hero({ lang, currentPage }) {
+  const { pages } = await getDictionary(lang)
+
+  function getHeroData() {
+    let data
+
+    switch (currentPage) {
+      case 'about':
+        data = pages.about
+        break
+      case 'news':
+        data = pages.news
+        break
+      case 'hospital':
+        data = pages.hospital
+        break
+      case 'academic':
+        data = pages.academic
+        break
+      case 'research':
+        data = pages.research
+        break
+      case 'student_life':
+        data = pages.student_life
+        break
+      case 'Colleges':
+        data = pages.Colleges
+        break
+      default:
+        data = pages.home
+    }
+    return data
+  }
+  const heroData = getHeroData()
+
   const pageSettingsData = await getPageSettings(lang)
   const getHeroImageFunction = () => {
     if (pageSettingsData.length == 0) {
@@ -32,15 +65,17 @@ async function Hero({ lang }) {
         <div className='flex h-full items-center justify-center'>
           <div className='px-6 text-center text-white md:px-12'>
             <h1 className='mb-10 mt-2 text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl'>
-              {pageSettingsData.length == 0
+              {/* {pageSettingsData.length == 0
                 ? ''
-                : pageSettingsData[0]?.attributes.Cover_Title}{' '}
+                : pageSettingsData[0]?.attributes.Cover_Title}{' '} */}
+              {heroData.title}
               <br />
             </h1>
             <p className='lg:px-64'>
-              {pageSettingsData.length == 0
+              {/* {pageSettingsData.length == 0
                 ? ''
-                : pageSettingsData[0]?.attributes.Cover_Descreption}
+                : pageSettingsData[0]?.attributes.Cover_Descreption} */}
+              {heroData.description}
             </p>
           </div>
         </div>

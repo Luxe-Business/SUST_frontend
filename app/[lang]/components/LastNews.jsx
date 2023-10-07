@@ -25,13 +25,11 @@ export default async function LastNews({ page, lg }) {
   }
 
   const {
-    home: { lastNews }
+    sections: { lastNews }
   } = page
   return (
     <section>
-      <h2 className='mb-12 text-center text-5xl font-medium'>
-        {lastNews.title}
-      </h2>
+      <h2 className='mb-12 text-center text-5xl font-medium'>{lastNews}</h2>
 
       <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
         {FeaturedNews.length == 0 ? (

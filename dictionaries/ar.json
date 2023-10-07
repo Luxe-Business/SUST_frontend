@@ -6,81 +6,81 @@
     "academic": "الشؤون الأكاديمية",
     "research": "البحث العلمي",
     "life": "الحياة الطلابية",
-    "hospital": "المشفى الجامعية",
-    "subhospital": [
-      ["CollegeOfEngineering", "كلية الهندسة", "CollegeOfEngineering"],
-      ["CollegeOfEngineering", "  كلية الطب"],
-      ["CollegeOfEngineering", "كلية التجارة  "],
-      ["CollegeOfEngineering", "كلية طب الأسنان  "],
-      ["CollegeOfEngineering", "كلية  الحقوق "]
-    ]
+    "hospital": "المشفى الجامعية"
   },
-  "hero": {
-    "title": "الصفحة الرئيسية الجامعة",
-    "description": "وريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر"
-  },
-  "page": {
+
+  "pages": {
     "home": {
-      "title": "test test test test",
+      "title": "الصفحة الرئيسية",
       "description": "test im test 13 test-test",
-      "lastNews": {
-        "title": "آخر الأخبار",
-        "news1": {
-          "title": "خبر رقم 1",
-          "description": "تم نشره بتاريخ",
-          "date": "13.09.2023"
+      "sections": {
+        "lastNews": "آخر الأخبار",
+        "stats": {
+          "title": "مخطط احصائيات الجامعة",
+          "counterSt": "عدد طلاب الجامعة",
+          "CounterGS": "خريجو الجامعة",
+          "CounterHi": "خريجو الدراسات العليا",
+          "CounterStHi": "طلاب الدراسات العليا"
         },
-        "news2": {
-          "title": "خبر رقم 2",
-          "description": "تم نشره بتاريخ",
-          "date": "12.09.2023"
+        "activities": "آخر الفعاليات",
+        "research": {
+          "title": "قائمة البحوث العلمية",
+          "subTitle": "لائحة من البحوث العليمة",
+          "paragraph": "العديد من الإكتشافات العظيمة على بعد نقرة",
+          "cta": "المزيد"
         },
-        "news3": {
-          "title": "خبر رقم 3",
-          "description": "تم نشره بتاريخ",
-          "date": "10.09.2023"
-        }
-      },
-      "stats": {
-        "title": "مخطط احصائيات الجامعة",
-        "counterSt": "عدد طلاب الجامعة",
-        "CounterGS": "خريجو الجامعة",
-        "CounterHi": "خريجو الدراسات العليا",
-        "CounterStHi": "طلاب الدراسات العليا"
-      },
-      "cuntactus": {
-        "title": "تواصل معنا",
-        "subTitle": "دعونا نتحدث عن كل شيء!",
-        "fullName": "الأسم كامل",
-        "mail": "البريد الألكتروني",
-        "message": "الرسالة",
-        "sendMessage": "ارسال رسالة"
-      },
-      "activities": {
-        "title": "آخر الفعاليات",
-        "activity1": {
-          "title": "فعالية رقم 1",
-          "description": "تمت بتاريخ",
-          "date": "13.09.2023"
-        },
-        "activity2": {
-          "title": "فعالية رقم 2",
-          "description": "تمت بتاريخ",
-          "date": "12.09.2023"
-        },
-        "activity3": {
-          "title": "فعالية رقم 3",
-          "description": "تمت بتاريخ",
-          "date": "10.09.2023"
+        "cuntactus": {
+          "title": "تواصل معنا",
+          "subTitle": "دعونا نتحدث عن كل شيء!",
+          "fullName": "الأسم كامل",
+          "mail": "البريد الألكتروني",
+          "message": "الرسالة",
+          "sendMessage": "ارسال رسالة"
         }
       }
     },
     "about": {
-      "title": "test uns",
-      "description": "test ist die test-test"
+      "title": "من نحن",
+      "description": "test ist die test-test",
+      "sections": {
+        "about_collage": "عن الجامعة",
+        "welcome_message": "رسالة ترحيب رئيس الجامعة",
+        "collage_policy": "سياسة الجامعة",
+        "policy": "سياسة الجامعة",
+        "vision": "الرؤيا والرسالة",
+        "collage_flag": "شعار الجامعة",
+        "startigic_plan": "الخطة الإسترتيجية",
+        "chart": "مخطط تنظيمي",
+        "collage_administration": "إدارة الجامعة",
+        "offices": "المكاتب والأقسام",
+        "depend": "الإعتمادية "
+      }
     },
     "news": {
-      "title": "صفحة جميع الأخبار"
+      "title": "أخبار الجامعة",
+      "description": "test ist die test-test"
+    },
+    "hospital": {
+      "title": "المشفى الجامعية",
+      "description": "test ist die test-test"
+    },
+    "academic": {
+      "title": "الشؤون الأكاديمية",
+      "description": "test ist die test-test"
+    },
+    "research": {
+      "title": "البحث العلمي",
+      "description": "test ist die test-test",
+      "headTitle": "البحث العلمي"
+    },
+    "student_life": {
+      "title": "الحياة الطلابية",
+      "description": "test ist die test-test",
+      "headTitle": "الحياة الطلابية"
+    },
+    "Colleges": {
+      "title": "الكليات والمعاهد",
+      "description": "test ist die test-test"
     }
   },
   "footer": {
@@ -99,6 +99,7 @@
     "terms": "شروط الخدمة",
     "privacy": "سياسة الخصوصية",
     "security": "الأمان",
-    "sitemap": "خريطة الموقع"
+    "sitemap": "خريطة الموقع",
+    "name": "الجامعة السورية للعلوم والتكنولوجيا"
   }
 }
