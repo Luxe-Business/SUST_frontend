@@ -1,12 +1,29 @@
 import { getDictionary } from '@/lib/dictionary'
+
+// export async function generateMetadata({ params: { lang } }) {
+//   // read route params
+
+//   const { pages } = await getDictionary(lang)
+
+//   // fetch data
+
+//   return {
+//     title: `${pages.academic?.title} | SUST`,
+//     description: pages.academic?.description || ''
+//     // keywords: seo.keywords?.split(' ') || ''
+//   }
+// }
 import React from 'react'
 
-async function Activities({params: {lang}}) {
-  const { page: {activities} } = await getDictionary(lang);
+async function Activities({ params: { lang } }) {
+  // const {
+  //   page: { activities }
+  // } = await getDictionary(lang)
 
-  return (
-    <div className='text-4xl'>{activities?.title}</div>
-  )
+  return <div className='text-4xl'></div>
+  // {
+  //   activities?.title
+  // }
 }
 
 export default Activities

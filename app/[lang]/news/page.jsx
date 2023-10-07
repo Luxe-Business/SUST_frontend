@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { getAllNews } from '@/app/libs/getAllData'
+import { getDictionary } from '@/lib/dictionary'
 import parse from 'html-react-parser'
 
 export async function generateMetadata({ params: { lang } }) {
