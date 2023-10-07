@@ -5,6 +5,20 @@ import Link from 'next/link'
 import { getAllNews } from '@/app/libs/getAllData'
 import parse from 'html-react-parser'
 
+export async function generateMetadata({ params: { lang } }) {
+  // read route params
+
+  const { pages } = await getDictionary(lang)
+
+  // fetch data
+
+  return {
+    title: `${pages.news?.title} | SUST`,
+    description: pages.news?.description || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
 async function NewsPage({ page, params: { lang } }) {
   const newsData = await getAllNews(lang)
   const getNewsImageFunction = news => {

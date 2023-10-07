@@ -4,6 +4,43 @@ import parse from 'html-react-parser'
 
 import { notFound } from 'next/navigation'
 
+export async function generateMetadata({ params: { lang, id } }) {
+  // read route params
+  const allColleges = await getCollegesAndInstitutes(lang)
+  let error = false
+
+  const checkData = () => {
+    if (!allColleges) {
+      error = true
+      console.log('There is no Data in this language Yet')
+    } else {
+      error = false
+      return allColleges
+    }
+  }
+
+  const collegesData = checkData()
+
+  const currentCollegeData = collegesData.filter(checkID)
+
+  //  if (currentCollegeData.length == 0) {
+  //    notFound()
+  //  }
+
+  function checkID(college) {
+    return college.id == id
+  }
+
+  // fetch data
+
+  return {
+    title: `${currentCollegeData[0]?.attributes.Title} | SUST`,
+
+    description: currentCollegeData[0]?.attributes.About_the_college || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
 const page = async ({ params: { lang, id } }) => {
   const allColleges = await getCollegesAndInstitutes(lang)
   let error = false
@@ -31,7 +68,7 @@ const page = async ({ params: { lang, id } }) => {
   }
 
   return (
-    <div className='container mx-auto'>
+    <div className='container mx-auto h-screen'>
       {error ? (
         <p className='text-center text-7xl text-red-500'>
           There is no data for this language

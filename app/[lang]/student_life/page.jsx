@@ -3,6 +3,20 @@ import React from 'react'
 
 import StudentsLife from '../components/StudentsLife'
 
+export async function generateMetadata({ params: { lang } }) {
+  // read route params
+
+  const { pages } = await getDictionary(lang)
+
+  // fetch data
+
+  return {
+    title: `${pages.student_life?.title} | SUST`,
+    description: pages.student_life?.description || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
 export default async function StudentLifePage({ params: { lang } }) {
   // const {
   //   page: { news }

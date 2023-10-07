@@ -4,7 +4,22 @@ import parse from 'html-react-parser'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 
-async function Single({ params: { id } }) {
+export async function generateMetadata({ params }) {
+  // read route params
+  const id = params.id
+
+  // fetch data
+  const product = await fetchSingleData(id, 'news')
+  const seo = product.data.attributes.seo
+
+  return {
+    title: seo.metaTitle || '',
+    description: seo.metaDescription || '',
+    keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
+export default async function Single({ params: { id } }) {
   const singleNewsRes = await fetchSingleData(id, 'news')
   const singleNewsData = singleNewsRes.data
 
@@ -49,5 +64,3 @@ async function Single({ params: { id } }) {
     </div>
   )
 }
-
-export default Single

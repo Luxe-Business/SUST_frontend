@@ -1,7 +1,22 @@
 import Image from 'next/image'
 import React from 'react'
 import parse from 'html-react-parser'
+import { getDictionary } from '@/lib/dictionary'
 import { getUniversityHospitals } from '@/app/libs/getAllData'
+
+export async function generateMetadata({ params: { lang } }) {
+  // read route params
+
+  const { pages } = await getDictionary(lang)
+
+  // fetch data
+
+  return {
+    title: `${pages.hospital?.title} | SUST`,
+    description: pages.hospital?.description || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
 
 const page = async ({ params: { lang } }) => {
   const UniverstyHospitalData = await getUniversityHospitals(lang)

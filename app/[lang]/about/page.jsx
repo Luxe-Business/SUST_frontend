@@ -2,6 +2,20 @@ import AboutPage from '../components/AboutPage'
 import { getDictionary } from '@/lib/dictionary'
 import { getPageSettings } from '@/app/libs/getAllData'
 
+export async function generateMetadata({ params: { lang } }) {
+  // read route params
+
+  const { pages } = await getDictionary(lang)
+
+  // fetch data
+
+  return {
+    title: `${pages.about?.title} | SUST`,
+    description: pages.about?.description || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
 export default async function Example({ params: { lang } }) {
   const { pages } = await getDictionary(lang)
   const pageSettingsData = await getPageSettings(lang)

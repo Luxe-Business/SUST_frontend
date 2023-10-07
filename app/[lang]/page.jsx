@@ -7,6 +7,20 @@ import ResearchSi from './components/ResearchSi'
 
 import { getPageSettings } from '@/app/libs/getAllData'
 
+export async function generateMetadata({ params: { lang } }) {
+  // read route params
+
+  const { pages } = await getDictionary(lang)
+
+  // fetch data
+
+  return {
+    title: `${pages.home?.title} | SUST`,
+    description: pages.home?.description || ''
+    // keywords: seo.keywords?.split(' ') || ''
+  }
+}
+
 export default async function Home({ params: { lang } }) {
   const { pages } = await getDictionary(lang)
 
