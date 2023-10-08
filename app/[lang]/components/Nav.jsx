@@ -33,7 +33,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       {/* { data?.Title} */}
       <li className='block   py-8   '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${pathname == `/${lang}` ? ' bg-[#019FF8] text-white' : ''}`
@@ -46,7 +45,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       </li>
       <li className='block   py-8    '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${pathname == `/${lang}/about` ? ' bg-[#019FF8] text-white' : ''}`
@@ -58,7 +56,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       </li>
       <li className='block   py-8   '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${
@@ -72,7 +69,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       </li>
       <li className='block   py-4   '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${
@@ -86,7 +82,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       </li>
       <li className='block   py-8   '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${
@@ -100,7 +95,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
       </li>
       <li className='block   py-8  '>
         <Link
-          onClick={CloseDropdown}
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${
