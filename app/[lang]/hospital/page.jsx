@@ -31,6 +31,19 @@ const page = async ({ params: { lang } }) => {
     )
   }
   const hospitalsData = UniverstyHospitalData[0]
+
+  const getImageFunction = selctedImage => {
+    if (
+      // UniverstyHospitalData.length == 0 ||
+      selctedImage.data == null
+      // hospitalsData.attributes.
+    ) {
+      return 'https://via.placeholder.com/350x150'
+    } else {
+      return selctedImage.data.attributes.formats.large.url
+      // hospitalsData.attributes.
+    }
+  }
   return (
     <div className=' mx-44 my-24  md:px-6'>
       <section className='mb-32 text-center md:text-left'>
@@ -42,7 +55,7 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://mdbcdn.b-cdn.net/img/new/standard/city/018.jpg'
+                src={getImageFunction(hospitalsData.attributes.About_image)}
                 className='w-full'
                 alt='Louvre'
                 width={800}
@@ -69,7 +82,7 @@ const page = async ({ params: { lang } }) => {
             </p> */}
             {parse(hospitalsData.attributes.About)}
           </div>
-        </div>
+        </div>{' '}
         <div className='mb-12 grid items-center gap-x-6 md:grid-cols-2 xl:gap-x-12'>
           <div className='mb-6 md:order-2 md:mb-0'>
             <div
@@ -78,7 +91,7 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://mdbcdn.b-cdn.net/img/new/standard/city/032.jpg'
+                src={getImageFunction(hospitalsData.attributes?.Sections_image)}
                 className='w-full'
                 alt='Louvre'
                 width={800}
@@ -114,7 +127,9 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://mdbcdn.b-cdn.net/img/new/standard/city/059.jpg'
+                src={getImageFunction(
+                  hospitalsData.attributes?.About_the_administration_image
+                )}
                 className='w-full'
                 alt='Louvre'
                 width={800}
@@ -149,7 +164,9 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://images.unsplash.com/photo-1512678080530-7760d81faba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80'
+                src={getImageFunction(
+                  hospitalsData.attributes?.about_the_doctors_image
+                )}
                 className='w-full'
                 alt='Louvre'
                 width={800}
@@ -185,7 +202,9 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://images.unsplash.com/photo-1664902276790-90624a60ff47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80'
+                src={getImageFunction(
+                  hospitalsData.attributes?.about_the_clinics_image
+                )}
                 className='w-full'
                 alt='Louvre'
                 width={800}
@@ -220,7 +239,9 @@ const page = async ({ params: { lang } }) => {
               data-te-ripple-color='light'
             >
               <Image
-                src='https://images.unsplash.com/photo-1620790647593-b3a6916c7d60?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80'
+                src={getImageFunction(
+                  hospitalsData.attributes?.about_the_patients_image
+                )}
                 className='w-full'
                 alt='Louvre'
                 width={800}

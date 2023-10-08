@@ -71,7 +71,7 @@ async function Hero({ lang, currentPage }) {
               {heroData.title}
               <br />
             </h1>
-            <p className='lg:px-64'>
+            <p className='mx-auto xl:max-w-[600px]'>
               {/* {pageSettingsData.length == 0
                 ? ''
                 : pageSettingsData[0]?.attributes.Cover_Descreption} */}

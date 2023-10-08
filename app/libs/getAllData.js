@@ -17,7 +17,7 @@ export async function getCollegesAndInstitutes(lang) {
 }
 
 export async function getUniversityHospitals(lang) {
-  const fetchedData = await fetchData(lang, 'university-hospitals')
+  const fetchedData = await fetchDataWithPopulate(lang, 'university-hospitals')
   return fetchedData.data
 }
 

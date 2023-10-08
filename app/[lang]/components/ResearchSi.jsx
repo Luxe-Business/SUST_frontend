@@ -78,7 +78,7 @@ const ResearchSi = async ({ page, lg }) => {
                     {singleResearch.attributes.Title}
                   </h2>
                   <div className='mt-2 text-gray-400'>
-                    {parse(singleResearch.attributes.Content)}
+                    {singleResearch.attributes.breif_Text}
                   </div>
 
                   <Link

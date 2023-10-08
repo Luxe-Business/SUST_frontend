@@ -59,7 +59,7 @@ export default async function Activities({ page, lg }) {
                     <h5 className='mb-3 text-lg font-bold'>
                       {actvity.attributes.title}
                     </h5>
-                    <div> {parse(actvity.attributes.content)}</div>
+                    <div> {actvity.attributes.breif_Text}</div>
                     <p>
                       <small>
                         <u>

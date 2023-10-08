@@ -12,7 +12,7 @@
   "pages": {
     "home": {
       "title": "Ana Sayfa",
-      "description": "test im test 13 test-test",
+      "description": "Suriye Bilim ve Teknoloji Üniversitesi, 2018 yılında kurulan resmi bir eğitim kurumu olup, merkezi Halep Valiliği'nin kuzeyinde, muhaliflerin kontrolündeki ve Suriye Geçici Hükümeti'ne bağlı bölgeler içerisinde yer almaktadır. Üniversitede 5 kolej ve bir enstitü bulunmaktadır. Kolejler Azaz şehrinde bulunmaktadır.",
       "sections": {
         "lastNews": "Son Haberler",
         "stats": {
@@ -41,7 +41,7 @@
     },
     "about": {
       "title": "Hakkımızda",
-      "description": "test ist die test-test",
+      "description": "Suriye Bilim ve Teknoloji Üniversitesi, eğitim kalitesi, bilimsel araştırma ve toplumsal hizmet kalitesiyle üniversiteler arasında ileri sıralara ulaşmak için öğrencilerin Suriye üniversiteleri arasında ilk adresi olmayı hedefliyor.",
       "sections": {
         "about_collage": "Üniversite hakkında",
         "welcome_message": "Üniversite Rektörünün Hoş Geldiniz Mesajı",
@@ -61,20 +61,20 @@
     },
     "hospital": {
       "title": "üniversite Hastanesi",
-      "description": "test ist die test-test"
+      "description": "Suriye Bilim ve Teknoloji Üniversitesi Hastanesi, Suriye Üniversitesi bünyesinde kurulmuş bir eğitim hastanesidir. Üniversite öğrencilerini hedef alıyor ve genel, nörolojik ve ortopedik cerrahi için donatılmış iki ameliyathaneyle donatarak bölgeye insani hizmetler sağlıyor. 20 adet hasta yatağı ve 4 adet yoğun bakım yatağından oluşmaktadır. Çeşitli uzmanlık alanlarındaki bir grup doktor ve tam bir hemşire kadrosu tarafından denetlenmektedir. Bağımsız bir doğumhane ve bebek kuvözleri içerir. Diş klinikleri bölümü hastane içerisinde hizmet vermek üzere 25 adet dişçi koltuğu ile donatıldı."
     },
     "academic": {
       "title": "Akademik ilişkiler",
-      "description": "test ist die test-test"
+      "description": "Akademik İşler Departmanı, yaratıcılığı ve mükemmelliği destekleyen ve teşvik eden bir eğitim ortamı sağlamak için yoğun bir şekilde çalışmaktadır. Üniversite eğitiminde en yüksek kalite standartlarına ulaşmak ve bu rol, üniversitenin misyon ve hedefleri doğrultusunda müfredat ve çalışma planlarının geliştirilmesinde, akademik programların oluşturulmasında, çeşitli üniversite etkinliklerinin desteklenmesinde ve teşvik edilmesinde ve vizyonunun gerçekleştirilmesinde vurgulanabilir."
     },
     "research": {
       "title": "Araştırma Lisansüstü Çalışmaları",
-      "description": "test ist die test-test",
+      "description": "Üniversite, misyonu tıp alanında çalışmalar, araştırmalar ve periyodik raporlar yürütmek olan üniversite merkezinde MS 2023 yılında Çalışma ve Araştırma Merkezi'nin açıldığını duyurdu.",
       "headTitle": "Bilimsel Araştırmalar"
     },
     "student_life": {
       "title": "Öğrenci hayatı",
-      "description": "test ist die test-test",
+      "description": "Suriye Bilim ve Teknoloji Üniversitesi Öğrenci İşleri Dairesi Başkanlığı, sadece öğrenciler için değil aynı zamanda akademik personel açısından da üniversitenin en önemli ve etkili birimlerinden biridir. Üniversitede öğrenciyi en çok etkileyen bölümdür ve bir yandan öğrenci ile üniversitenin çeşitli bölümleri, diğer yandan da yerel toplum arasında bir bağlantı görevi görür.",
       "headTitle": "Öğrenci hayatı"
     },
     "Colleges": {

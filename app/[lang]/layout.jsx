@@ -21,7 +21,6 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }) {
   const isArabic = params.lang === 'ar'
   const direction = isArabic ? 'rtl' : 'ltr'
-  console.log(params)
 
   return (
     <html lang={params.lang} dir={params.lang == 'ar' ? 'rtl' : 'ltr'}>

@@ -12,7 +12,7 @@
   "pages": {
     "home": {
       "title": "Home Page",
-      "description": "test im test 13 test-test",
+      "description": "The Syrian University of Science and Technology is an official educational institution established in 2018, and its center is north of Aleppo Governorate, within the areas controlled by the opposition and affiliated with the Syrian Interim Government. The university includes 5 colleges and one institute. The colleges are located in the city of Azaz.",
       "sections": {
         "lastNews": "Latest News",
         "stats": {
@@ -41,7 +41,7 @@
     },
     "about": {
       "title": "About Us",
-      "description": "test ist die test-test",
+      "description": "The Syrian University of Science and Technology seeks to be the first destination for students among Syrian universities with the quality of education, scientific research and community service to reach advanced ranks among universities.",
       "sections": {
         "about_collage": "About the university",
         "welcome_message": "University President's Welcome Message",
@@ -61,20 +61,20 @@
     },
     "hospital": {
       "title": "University Hospital",
-      "description": "test ist die test-test"
+      "description": "The Syrian University of Science and Technology Hospital is a training hospital established within the Syrian University. It targets university students, and provides humanitarian services to the region by equipping it with two operating rooms equipped for general, neurological, and orthopedic surgery. It consists of 20 patient beds and 4 intensive care beds. It is supervised by a group of doctors in various specialties and a full nursing staff. It includes an independent maternity ward and baby incubators. The dental clinics department was equipped with 25 dental chairs to provide services inside the hospital."
     },
     "academic": {
       "title": "Academic Affairs",
-      "description": "test ist die test-test"
+      "description": "The Academic Affairs Department works hard to provide an educational environment that supports and stimulates creativity and excellence. To achieve the highest quality standards in university education, and this role may be highlighted in developing curricula and study plans, creating academic programs, and supporting and encouraging various university activities, in line with the university’s mission and goals, and in achieving its vision."
     },
     "research": {
       "title": "Research Graduate Studies",
-      "description": "test ist die test-test",
+      "description": "The university announced the opening of the Center for Studies and Research in the year 2023 AD in the university center, whose mission is to conduct studies, research, and periodic reports on medical...",
       "headTitle": "Scientific Researchs"
     },
     "student_life": {
       "title": "Student Life",
-      "description": "test ist die test-test",
+      "description": "The Student Affairs Department at the Syrian University of Science and Technology is one of the most important and effective departments of the university, not only for students but also for members of the academic staff. It is the department in the university that most affects the student, and it works as a link between the student and the various university departments on the one hand, and the local community on the other. .",
       "headTitle": "Student life"
     },
     "Colleges": {

@@ -58,7 +58,7 @@ export default async function LastNews({ page, lg }) {
                       <h5 className='mb-3 text-lg font-bold'>
                         {cutStringByWords(news.attributes.Title, 4)}
                       </h5>
-                      <div> {parse(news.attributes.Content)}</div>
+                      <div> {news.attributes.breif_Text}</div>
                       <p>
                         <small>
                           <u>

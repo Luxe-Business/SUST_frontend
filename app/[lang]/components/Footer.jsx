@@ -44,14 +44,14 @@ export default async function Footer({ lang }) {
 
   return (
     <>
-      <div className='relative  flex justify-start md:items-end md:justify-center '>
+      <div className='relative bottom-0 left-0  flex justify-start md:items-end md:justify-center '>
         <Image
           className='absolute  top-10 z-0 h-full w-full object-cover lg:object-fill xl:mt-10'
           src='https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png'
           alt='background'
           fill={true}
         />
-        <div className='relative z-10 flex flex-col items-start   justify-start px-4  pt-36 md:items-center md:justify-center md:px-6 md:pt-32 lg:pt-40 xl:px-20 xl:pt-96'>
+        <div className=' z-10 flex flex-col items-start   justify-start px-4  pt-36 md:items-center md:justify-center md:px-6 md:pt-32 lg:pt-40 xl:px-20 xl:pt-96'>
           <div className='flex  flex-col items-start justify-between gap-5 xl:flex-row xl:justify-center xl:space-x-8'>
             <div className='flex  items-center justify-start space-x-4'>
               <div className='w-16 cursor-pointer self-start'>

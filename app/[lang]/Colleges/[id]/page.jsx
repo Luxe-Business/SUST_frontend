@@ -68,7 +68,7 @@ const page = async ({ params: { lang, id } }) => {
   }
 
   return (
-    <div className='container mx-auto h-screen'>
+    <div className='container mx-auto  min-h-screen'>
       {error ? (
         <p className='text-center text-7xl text-red-500'>
           There is no data for this language
