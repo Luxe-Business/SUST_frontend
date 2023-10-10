@@ -16,16 +16,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
     setIsOpen(false)
   }
 
-  // const [data, setData] = useState(null);
-
-  // useEffect(() => {
-  //   async function getData() {
-  //     const fetchedData = await fetchData(lang, 'colleges-and-institutes');
-  //     setData(fetchedData);
-  //   }
-  //   getData();
-  // }, [lang]);
-
   const hospitalMenuItems = navigation.subhospital
 
   return (

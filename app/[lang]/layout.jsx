@@ -5,7 +5,8 @@ import { Inter } from 'next/font/google'
 
 import Footer from './components/Footer'
 import { Providers } from './providers'
-import HeroWraper from './components/HeroWraper'
+
+import HeroWraper from '@/app/[lang]/components/HeroWraper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,6 +22,7 @@ export async function generateStaticParams() {
 export default function RootLayout({ children, params }) {
   const isArabic = params.lang === 'ar'
   const direction = isArabic ? 'rtl' : 'ltr'
+  console.log(params)
 
   return (
     <html lang={params.lang} dir={params.lang == 'ar' ? 'rtl' : 'ltr'}>
@@ -28,7 +30,8 @@ export default function RootLayout({ children, params }) {
         <Header lang={params.lang} />
         <main>
           <section className='py-6'>
-            <HeroWraper lang={params.lang} />
+            <HeroWraper lang={params.lang} id={params.id ? params.id : ''} />
+
             <div className='py-20'>
               <Providers>{children}</Providers>
             </div>

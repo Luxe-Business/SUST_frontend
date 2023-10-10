@@ -34,6 +34,12 @@ export async function getScientificResearch(lang) {
   return fetchedData.data
 }
 
+export async function getAllActivites(lang) {
+  const fetchedData = await fetchDataWithPopulate(lang, 'university-activites')
+
+  return fetchedData.data
+}
+
 export async function getStudentLives(lang) {
   const fetchedData = await fetchData(lang, 'student-lives')
   return fetchedData.data

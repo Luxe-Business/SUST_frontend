@@ -108,7 +108,7 @@ export default function Research({ data, lang }) {
                 />
 
                 <div className='mb-2 mt-4 px-2'>
-                  {parse(research.attributes.Content)}
+                  {research.attributes.breif_Text}
                 </div>
               </Link>
             </Card>

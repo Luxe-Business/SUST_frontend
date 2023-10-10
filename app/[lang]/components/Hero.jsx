@@ -1,12 +1,14 @@
-import Image from 'next/image'
-import React from 'react'
-import { getDictionary } from '@/lib/dictionary'
+'use client'
+
+import { usePathname } from 'next/navigation'
+import { fetchSingleData } from '@/app/api/route'
+
+import React, { useState, useEffect } from 'react'
+
 import SocialMedia from './SocialMedia'
 
-import { getPageSettings } from '@/app/libs/getAllData'
-
-async function Hero({ lang, currentPage }) {
-  const { pages } = await getDictionary(lang)
+function Hero({ lang, pages, pageSettingsData, HeroImage, params }) {
+  const currentPage = usePathname().split('/')[2]
 
   function getHeroData() {
     let data
@@ -38,19 +40,8 @@ async function Hero({ lang, currentPage }) {
     }
     return data
   }
-  const heroData = getHeroData()
 
-  const pageSettingsData = await getPageSettings(lang)
-  const getHeroImageFunction = () => {
-    if (pageSettingsData.length == 0) {
-      return 'https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg'
-    } else {
-      return pageSettingsData[0]?.attributes.cover_image.data.attributes.formats
-        .large.url
-    }
-  }
-
-  const HeroImage = getHeroImageFunction()
+  let heroData = getHeroData()
 
   return (
     <div

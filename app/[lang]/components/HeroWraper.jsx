@@ -1,15 +1,46 @@
-'use client'
-import { usePathname } from 'next/navigation'
-import Hero from './Hero'
-
 import React from 'react'
+import Hero from './Hero'
+import { getDictionary } from '@/lib/dictionary'
 
-const HeroWraper = ({ lang }) => {
-  const pathname = usePathname().split('/')[2]
+import { fetchSingleData } from '@/app/api/route'
+import { notFound } from 'next/navigation'
+
+import { getPageSettings } from '@/app/libs/getAllData'
+
+import { headers } from 'next/headers'
+
+async function HeroWraper({ lang, id }) {
+  const headersList = headers()
+  const pathname = headersList.get('x-invoke-path') || ''
+  console.log(pathname)
+
+  // const singleActivityRes = await fetchSingleData(id, 'colleges-and-institutes')
+  // const singleActivityData = singleActivityRes.data
+  // if (singleActivityRes.error) {
+  //   notFound()
+  // }
+
+  const { pages } = await getDictionary(lang)
+
+  const pageSettingsData = await getPageSettings(lang)
+  const getHeroImageFunction = () => {
+    if (pageSettingsData.length == 0) {
+      return 'https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg'
+    } else {
+      return pageSettingsData[0]?.attributes.cover_image.data.attributes.formats
+        .large.url
+    }
+  }
+
+  const HeroImage = getHeroImageFunction()
 
   return (
     <>
-      <Hero lang={lang} currentPage={pathname} />
+      <Hero
+        pages={pages}
+        pageSettingsData={pageSettingsData}
+        HeroImage={HeroImage}
+      />
     </>
   )
 }

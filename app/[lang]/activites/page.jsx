@@ -15,7 +15,7 @@ import { getDictionary } from '@/lib/dictionary'
 // }
 import React from 'react'
 
-async function Activities({ params: { lang } }) {
+async function Activities({ params: { lang, id } }) {
   // const {
   //   page: { activities }
   // } = await getDictionary(lang)
