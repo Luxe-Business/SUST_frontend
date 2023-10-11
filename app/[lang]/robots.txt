@@ -1,6 +1,4 @@
-# Allow all crawlers
 User-agent: *
-Allow: /
 Disallow: /private/
-
-Sitemap: https://www.syrian-university.com/en/sitemap.xml
+Allow: /public/
+Sitemap: https://syrian-university.com/sitemap.xml
