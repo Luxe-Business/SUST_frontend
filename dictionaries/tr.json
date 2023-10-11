@@ -57,7 +57,7 @@
     },
     "news": {
       "title": "Tüm Haberler Sayfası",
-      "description": "test ist die test-test"
+      "description": ""
     },
     "hospital": {
       "title": "üniversite Hastanesi",
@@ -79,7 +79,7 @@
     },
     "Colleges": {
       "title": "Kolejler ve enstitüler",
-      "description": "test ist die test-test"
+      "description": ""
     }
   },
   "footer": {
