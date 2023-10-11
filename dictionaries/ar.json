@@ -58,7 +58,7 @@
     },
     "news": {
       "title": "أخبار الجامعة",
-      "description": "test ist die test-test"
+      "description": ""
     },
     "hospital": {
       "title": "المشفى الجامعية",
@@ -80,7 +80,7 @@
     },
     "Colleges": {
       "title": "الكليات والمعاهد",
-      "description": "test ist die test-test"
+      "description": ""
     }
   },
   "footer": {
