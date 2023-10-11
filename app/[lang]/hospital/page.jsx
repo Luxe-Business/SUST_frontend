@@ -40,12 +40,12 @@ const page = async ({ params: { lang } }) => {
     ) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return selctedImage.data.attributes.formats.large.url
+      return selctedImage.data.attributes.formats.medium.url
       // hospitalsData.attributes.
     }
   }
   return (
-    <div className=' mx-44 my-24  md:px-6'>
+    <div className=' mx-5 my-24 md:px-6  xl:mx-44'>
       <section className='mb-32 text-center md:text-left'>
         <div className='mb-12 grid items-center gap-x-6 md:grid-cols-2 xl:gap-x-12'>
           <div className='mb-6 md:mb-0'>

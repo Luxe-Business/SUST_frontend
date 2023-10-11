@@ -3,11 +3,10 @@ import pres from './images/pres.jpg'
 import parse from 'html-react-parser'
 
 export default function Greeting({ content, image }) {
-  // console.log(content)
   return (
     <div className=''>
-      <div className='mb-10 flex flex-wrap'>
-        <div className='w-1/4 px-5'>
+      <div className='mb-10 flex flex-col flex-wrap lg:flex-row'>
+        <div className='w-full px-5 lg:w-1/4'>
           <Image
             width={200}
             height={200}
@@ -16,7 +15,7 @@ export default function Greeting({ content, image }) {
             alt=''
           />
         </div>
-        <div className='w-3/4 px-5 text-xl'>
+        <div className='px-5 text-xl md:w-3/4'>
           {!content ? 'There is no data' : parse(content)}
         </div>
       </div>

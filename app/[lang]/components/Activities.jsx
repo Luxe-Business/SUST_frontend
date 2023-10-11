@@ -13,7 +13,7 @@ export default async function Activities({ page, lg }) {
     ) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return activites.attributes.image.data.attributes.formats.large.url
+      return activites.attributes.image.data.attributes.formats.medium.url
     }
   }
 

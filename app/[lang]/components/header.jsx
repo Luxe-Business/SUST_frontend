@@ -26,7 +26,7 @@ export default async function Header({ lang }) {
     ) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return logo.attributes.University_logo.data.attributes.formats.large.url
+      return logo.attributes.University_logo.data.attributes.formats.medium.url
     }
   }
 
@@ -64,7 +64,11 @@ export default async function Header({ lang }) {
                 collegesData={collegesData}
               />
               <LocaleSwitcher />
-              <NavMobile lang={lang} navigation={navigation} />
+              <NavMobile
+                lang={lang}
+                navigation={navigation}
+                collegesData={collegesData}
+              />
             </div>
           </div>
         </div>

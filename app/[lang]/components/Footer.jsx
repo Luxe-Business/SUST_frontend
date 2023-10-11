@@ -32,7 +32,7 @@ export default async function Footer({ lang }) {
     ) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return logo.attributes.University_logo.data.attributes.formats.large.url
+      return logo.attributes.University_logo.data.attributes.formats.medium.url
     }
   }
 

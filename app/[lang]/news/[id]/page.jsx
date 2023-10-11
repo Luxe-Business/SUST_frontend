@@ -31,7 +31,7 @@ export default async function Single({ params: { id } }) {
     if (singleNewsRes.length == 0 || news.attributes.image.data == null) {
       return ''
     } else {
-      return news.attributes.image.data.attributes.formats.large.url
+      return news.attributes.image.data.attributes.formats.medium.url
     }
   }
 

@@ -22,7 +22,7 @@ async function SingleResearch({ params: { id } }) {
     ) {
       return ''
     } else {
-      return research.attributes.image.data.attributes.formats.large.url
+      return research.attributes.image.data.attributes.formats.medium.url
     }
   }
 

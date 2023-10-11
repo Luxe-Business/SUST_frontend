@@ -9,6 +9,7 @@ import Link from 'next/link'
 import ContentLoader from 'react-content-loader'
 
 import { Card, CardHeader, Image } from '@nextui-org/react'
+import { NextUIProvider } from '@nextui-org/react'
 
 export default function Research({ data, lang }) {
   const [researchData, setResearchData] = useState([])
@@ -34,12 +35,12 @@ export default function Research({ data, lang }) {
     if (researchData.length == 0 || research.attributes.image.data == null) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return research.attributes.image.data.attributes.formats.large.url
+      return research.attributes.image.data.attributes.formats.medium.url
     }
   }
 
   return (
-    <>
+    <NextUIProvider>
       <h2 className='mb-2 text-3xl font-bold'>{data.headTitle}</h2>
       <hr className='mb-5' />
       <div className='grid max-w-[1400px] grid-cols-12 grid-rows-2 gap-2 px-8'>
@@ -125,6 +126,6 @@ export default function Research({ data, lang }) {
         المختلفة، ورفد المجتمع الفلسطيني باحتياجاته من أنواع المعرفة العلمية
         المتطورة التي تسهم في دعم الاقتصاد الوطني ونموه وتطوره..
       </p> */}
-    </>
+    </NextUIProvider>
   )
 }

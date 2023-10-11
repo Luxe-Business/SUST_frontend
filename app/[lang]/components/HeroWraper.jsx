@@ -28,7 +28,7 @@ async function HeroWraper({ lang, id }) {
       return 'https://images.squarespace-cdn.com/content/v1/6051eac616f58d6b0b8af484/1618589907784-M538LOR1RC6FWZ0KVI50/back.jpeg'
     } else {
       return pageSettingsData[0]?.attributes.cover_image.data.attributes.formats
-        .large.url
+        .medium.url
     }
   }
 

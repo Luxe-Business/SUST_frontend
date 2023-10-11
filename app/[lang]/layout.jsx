@@ -4,7 +4,6 @@ import Header from './components/header'
 import { Inter } from 'next/font/google'
 
 import Footer from './components/Footer'
-import { Providers } from './providers'
 
 import HeroWraper from '@/app/[lang]/components/HeroWraper'
 
@@ -32,9 +31,7 @@ export default function RootLayout({ children, params }) {
           <section className='py-6'>
             <HeroWraper lang={params.lang} id={params.id ? params.id : ''} />
 
-            <div className='py-20'>
-              <Providers>{children}</Providers>
-            </div>
+            <div className='py-20'>{children}</div>
           </section>
         </main>
         <Footer lang={params.lang} />

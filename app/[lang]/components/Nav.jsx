@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { IoIosArrowDown } from 'react-icons/io'
-import { fetchData } from '@/app/api/route'
 import { usePathname } from 'next/navigation'
 
 const Nav = ({ lang, navigation, collegesData }) => {
@@ -15,8 +14,6 @@ const Nav = ({ lang, navigation, collegesData }) => {
   const CloseDropdown = () => {
     setIsOpen(false)
   }
-
-  const hospitalMenuItems = navigation.subhospital
 
   return (
     <div className='hidden h-[100px] w-fit items-center justify-between text-lg font-[700] leading-7 lg:flex '>
@@ -88,7 +85,7 @@ const Nav = ({ lang, navigation, collegesData }) => {
           className={
             'relative block px-4 py-8 font-bold  hover:bg-[#019FF8] hover:text-white lg:p-4' +
             `${
-              pathname == `/${lang}/student-life`
+              pathname == `/${lang}/student_life`
                 ? ' bg-[#019FF8] text-white'
                 : ''
             }`

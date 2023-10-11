@@ -9,7 +9,7 @@ export default async function LastNews({ page, lg }) {
     if (FeaturedNews.length == 0 || news.attributes.image.data == null) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return news.attributes.image.data.attributes.formats.large.url
+      return news.attributes.image.data.attributes.formats.medium.url
     }
   }
 

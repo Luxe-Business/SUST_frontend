@@ -16,7 +16,7 @@ const ResearchSi = async ({ page, lg }) => {
     ) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return research.attributes.image.data.attributes.formats.large.url
+      return research.attributes.image.data.attributes.formats.medium.url
     }
   }
 

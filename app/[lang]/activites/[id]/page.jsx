@@ -18,7 +18,7 @@ async function Single({ params: { id } }) {
     ) {
       return ''
     } else {
-      return actvity.attributes.image.data.attributes.formats.large.url
+      return actvity.attributes.image.data.attributes.formats.medium.url
     }
   }
 

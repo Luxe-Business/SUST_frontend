@@ -26,7 +26,7 @@ async function NewsPage({ page, params: { lang } }) {
     if (newsData.length == 0 || news.attributes.image.data == null) {
       return 'https://via.placeholder.com/350x150'
     } else {
-      return news.attributes.image.data.attributes.formats.large.url
+      return news.attributes.image.data.attributes.formats.medium.url
     }
   }
 
