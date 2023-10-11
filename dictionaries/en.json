@@ -57,7 +57,7 @@
     },
     "news": {
       "title": "News",
-      "description": "test ist die test-test"
+      "description": ""
     },
     "hospital": {
       "title": "University Hospital",
@@ -79,7 +79,7 @@
     },
     "Colleges": {
       "title": "Colleges and institutes",
-      "description": "test ist die test-test"
+      "description": ""
     }
   },
   "footer": {
