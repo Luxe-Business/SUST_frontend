@@ -16,7 +16,7 @@ async function SocialMedia({ lang }) {
 
   return (
     <>
-      <div className='fixed left-0 top-[40%] z-10 cursor-pointer  text-xl'>
+      <div className='md:fixed hidden left-0 top-[40%] z-10 cursor-pointer  text-xl'>
         <ul className='parent m-0 text-white'>
           {/* <li className='dd bg-green-600 p-2.5'>
             <BsWhatsapp className='hover:translate-x-1' />
