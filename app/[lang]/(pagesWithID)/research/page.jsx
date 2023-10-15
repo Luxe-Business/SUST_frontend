@@ -1,6 +1,7 @@
 import { getDictionary } from '@/lib/dictionary'
 import React from 'react'
-import Research from '../components/Research'
+import Research from '@/app/[lang]/components/Research'
+import HeroWraper from '@/app/[lang]/components/HeroWraper'
 
 export async function generateMetadata({ params: { lang } }) {
   // read route params
@@ -20,8 +21,11 @@ export default async function ResearchPage({ params: { lang } }) {
   const { pages } = await getDictionary(lang)
 
   return (
-    <div className='container w-full'>
-      <Research data={pages.research} lang={lang} />
-    </div>
+    <>
+      <HeroWraper lang={lang} />
+      <div className='container w-full py-20'>
+        <Research data={pages.research} lang={lang} />
+      </div>
+    </>
   )
 }

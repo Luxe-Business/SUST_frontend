@@ -56,8 +56,12 @@
       }
     },
     "news": {
-      "title": "Tüm Haberler Sayfası",
-      "description": ""
+      "title": "Haberler",
+      "description": "En son üniversite haberleri"
+    },
+    "activites": {
+      "title": "Üniversite faaliyetleri",
+      "description": "Üniversite tarafından yayınlanan en son etkinlikler"
     },
     "hospital": {
       "title": "üniversite Hastanesi",
@@ -78,8 +82,7 @@
       "headTitle": "Öğrenci hayatı"
     },
     "Colleges": {
-      "title": "Kolejler ve enstitüler",
-      "description": ""
+      "title": "Kolejler ve enstitüler"
     }
   },
   "footer": {

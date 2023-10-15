@@ -1,6 +1,6 @@
 import { getDictionary } from '@/lib/dictionary'
 import React from 'react'
-import Academic from '../components/Academic'
+import Academic from '@/app/[lang]/components/Academic'
 
 export async function generateMetadata({ params: { lang } }) {
   // read route params

@@ -57,7 +57,11 @@
     },
     "news": {
       "title": "News",
-      "description": ""
+      "description": "Latest university news"
+    },
+    "activites": {
+      "title": "University activities",
+      "description": "Latest activities issued by the university"
     },
     "hospital": {
       "title": "University Hospital",
@@ -78,8 +82,7 @@
       "headTitle": "Student life"
     },
     "Colleges": {
-      "title": "Colleges and institutes",
-      "description": ""
+      "title": "Colleges and institutes"
     }
   },
   "footer": {

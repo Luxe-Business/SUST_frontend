@@ -6,9 +6,15 @@ import React from 'react'
 
 import SocialMedia from './SocialMedia'
 
-function Hero({ lang, pages, pageSettingsData, HeroImage, params }) {
+function Hero({
+  lang,
+  pages,
+  pageSettingsData,
+  HeroImage,
+  params,
+  singleCollegeData
+}) {
   const currentPage = usePathname().split('/')[2]
-
   function getHeroData() {
     let data
 
@@ -21,6 +27,9 @@ function Hero({ lang, pages, pageSettingsData, HeroImage, params }) {
         break
       case 'hospital':
         data = pages.hospital
+        break
+      case 'activites':
+        data = pages.activites
         break
       case 'academic':
         data = pages.academic
@@ -65,7 +74,9 @@ function Hero({ lang, pages, pageSettingsData, HeroImage, params }) {
               {/* {pageSettingsData.length == 0
                 ? ''
                 : pageSettingsData[0]?.attributes.Cover_Descreption} */}
-              {heroData.description}
+              {heroData.description == undefined
+                ? singleCollegeData.attributes.Title
+                : heroData.description}
             </p>
           </div>
         </div>

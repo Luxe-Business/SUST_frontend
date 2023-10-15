@@ -58,7 +58,11 @@
     },
     "news": {
       "title": "أخبار الجامعة",
-      "description": ""
+      "description": "أخر أخبار الجامعة"
+    },
+    "activites": {
+      "title": "أنشطة الجامعة",
+      "description": "أخر الأنشطة التي أصدرتها الجامعة "
     },
     "hospital": {
       "title": "المشفى الجامعية",
@@ -79,8 +83,7 @@
       "headTitle": "الحياة الطلابية"
     },
     "Colleges": {
-      "title": "الكليات والمعاهد",
-      "description": ""
+      "title": "الكليات والمعاهد"
     }
   },
   "footer": {

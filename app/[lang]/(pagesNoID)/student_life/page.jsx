@@ -1,7 +1,7 @@
 import { getDictionary } from '@/lib/dictionary'
 import React from 'react'
 
-import StudentsLife from '../components/StudentsLife'
+import StudentsLife from '@/app/[lang]/components/StudentsLife'
 
 export async function generateMetadata({ params: { lang } }) {
   // read route params

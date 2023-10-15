@@ -4,6 +4,7 @@ import Activities from './components/Activities'
 import ContactUs from './components/ContactUs'
 import UniversityStatistics from './components/UniversityStatistics'
 import ResearchSi from './components/ResearchSi'
+import HeroWraper from '@/app/[lang]/components/HeroWraper'
 
 import { getPageSettings } from '@/app/libs/getAllData'
 
@@ -51,26 +52,29 @@ export default async function Home({ params: { lang } }) {
   }
 
   return (
-    <div className='container'>
-      <LastNews page={pages.home} lg={lang} />
-      <Activities page={pages.home} lg={lang} />
-      <UniversityStatistics
-        page={pages.home}
-        studenstNumber={
-          pageSettingsData[0]?.attributes.Number_of_university_students
-        }
-        postGraduateNumber={
-          pageSettingsData[0]?.attributes.postgraduate_students
-        }
-        universityGraduatesNumber={
-          pageSettingsData[0]?.attributes.university_graduates
-        }
-        postGraduateGraduatesNumber={
-          pageSettingsData[0]?.attributes.postgraduate_graduates
-        }
-      />
-      <ResearchSi page={pages.home} lg={lang} />
-      <ContactUs page={pages.home} lang={{ lang }} />
-    </div>
+    <>
+      <HeroWraper lang={lang} />
+      <div className='container py-20'>
+        <LastNews page={pages.home} lg={lang} />
+        <Activities page={pages.home} lg={lang} />
+        <UniversityStatistics
+          page={pages.home}
+          studenstNumber={
+            pageSettingsData[0]?.attributes.Number_of_university_students
+          }
+          postGraduateNumber={
+            pageSettingsData[0]?.attributes.postgraduate_students
+          }
+          universityGraduatesNumber={
+            pageSettingsData[0]?.attributes.university_graduates
+          }
+          postGraduateGraduatesNumber={
+            pageSettingsData[0]?.attributes.postgraduate_graduates
+          }
+        />
+        <ResearchSi page={pages.home} lg={lang} />
+        <ContactUs page={pages.home} lang={{ lang }} />
+      </div>
+    </>
   )
 }

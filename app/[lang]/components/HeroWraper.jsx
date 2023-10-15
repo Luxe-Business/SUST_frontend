@@ -12,13 +12,9 @@ import { headers } from 'next/headers'
 async function HeroWraper({ lang, id }) {
   const headersList = headers()
   const pathname = headersList.get('x-invoke-path') || ''
-  console.log(pathname)
 
-  // const singleActivityRes = await fetchSingleData(id, 'colleges-and-institutes')
-  // const singleActivityData = singleActivityRes.data
-  // if (singleActivityRes.error) {
-  //   notFound()
-  // }
+  const singleCollegeRes = await fetchSingleData(id, 'colleges-and-institutes')
+  const singleCollegeData = singleCollegeRes.data
 
   const { pages } = await getDictionary(lang)
 
@@ -37,6 +33,7 @@ async function HeroWraper({ lang, id }) {
   return (
     <>
       <Hero
+        singleCollegeData={singleCollegeData ? singleCollegeData : ''}
         pages={pages}
         pageSettingsData={pageSettingsData}
         HeroImage={HeroImage}

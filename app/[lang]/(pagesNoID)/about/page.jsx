@@ -1,4 +1,4 @@
-import AboutPage from '../components/AboutPage'
+import AboutPage from '@/app/[lang]/components/AboutPage'
 import { getDictionary } from '@/lib/dictionary'
 import { getPageSettings } from '@/app/libs/getAllData'
 
