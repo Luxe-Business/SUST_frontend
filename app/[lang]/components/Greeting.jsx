@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import pres from './images/pres.jpg'
+
 import parse from 'html-react-parser'
 
 export default function Greeting({ content, image }) {
@@ -11,7 +11,7 @@ export default function Greeting({ content, image }) {
             width={200}
             height={200}
             className='w-full rounded-md'
-            src={!image ? pres : image}
+            src={!image ? '' : image}
             alt=''
           />
         </div>
