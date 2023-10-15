@@ -99,7 +99,7 @@ export default async function Footer({ lang }) {
                 </Link>
                 <Link
                   className='text-left text-base leading-none text-gray-100 hover:text-gray-400'
-                  href={`/${lang}/student-life`}
+                  href={`/${lang}/student_life`}
                 >
                   {footer.life}
                 </Link>

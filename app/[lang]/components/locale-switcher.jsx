@@ -4,45 +4,57 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 
 import { usePathname } from 'next/navigation'
-import { BiWorld } from 'react-icons/bi';
-import { IoIosArrowDown } from 'react-icons/io';
+import { BiWorld } from 'react-icons/bi'
+import { IoIosArrowDown } from 'react-icons/io'
 
 import { i18n } from '@/i18n.config'
 
 export default function LocaleSwitcher() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
   const pathName = usePathname()
 
-  const redirectedPathName = (locale) => {
+  const redirectedPathName = locale => {
     if (!pathName) return '/'
     const segments = pathName.split('/')
     segments[1] = locale
+    if (segments[3] !== undefined) {
+      return '/' + locale
+    }
     return segments.join('/')
   }
 
   return (
-    <div className="">
-    <div className="group relative">
-        <button className="flex  justify-center items-center gap-1 bg-gray-800 text-white px-2 h-8 rounded">
-        <BiWorld/>
-        <IoIosArrowDown/>
+    <div className=''>
+      <div className='group relative'>
+        <button className='flex  h-8 items-center justify-center gap-1 rounded bg-gray-800 px-2 text-white'>
+          <BiWorld />
+          <IoIosArrowDown />
         </button>
-        <nav tabIndex="0" className=" border-2 bg-white invisible border-gray-800 rounded w-20 absolute left-0 top-full transition-all opacity-0 group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-1">
-            <ul className="">
+        <nav
+          tabIndex='0'
+          className=' invisible absolute left-0 top-full w-20 rounded border-2 border-gray-800 bg-white opacity-0 transition-all group-focus-within:visible group-focus-within:translate-y-1 group-focus-within:opacity-100'
+        >
+          <ul className=''>
             {i18n.locales.map(locale => {
-        return (
-          <li key={locale}  className="block   ">
-           <Link href={redirectedPathName(locale)} className="block px-8 py-3  text-gray-700 hover:bg-[#2386C8] hover:text-white  " >  {locale}</Link>
+              return (
+                <li key={locale} className='block   '>
+                  <Link
+                    href={redirectedPathName(locale)}
+                    className='block px-8 py-3  text-gray-700 hover:bg-[#2386C8] hover:text-white  '
+                  >
+                    {' '}
+                    {locale}
+                  </Link>
                 </li>
-         )})}
-            </ul>
+              )
+            })}
+          </ul>
         </nav>
+      </div>
     </div>
-</div>
-
   )
 }
 
