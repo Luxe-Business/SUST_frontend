@@ -1,5 +1,5 @@
 export async function fetchData(lang, endpoint) {
-  const url = `https://ambitious-warmth-a158024e45.strapiapp.com/api/${endpoint}?locale=${lang}`
+  const url = `https://syrianuniversity-production.up.railway.app/api/${endpoint}?locale=${lang}`
   const res = await fetch(url, {
     next: { revalidate: 10 }
   })
@@ -9,7 +9,7 @@ export async function fetchData(lang, endpoint) {
 }
 
 export async function fetchDataWithPopulate(lang, endpoint) {
-  const url = `https://ambitious-warmth-a158024e45.strapiapp.com/api/${endpoint}?populate=*&locale=${lang}`
+  const url = `https://syrianuniversity-production.up.railway.app/api/${endpoint}?populate=*&locale=${lang}`
   const res = await fetch(url, {
     next: { revalidate: 10 }
   })
@@ -18,7 +18,7 @@ export async function fetchDataWithPopulate(lang, endpoint) {
   return data
 }
 export async function fetchSingleData(id, endpoint) {
-  const url = `https://ambitious-warmth-a158024e45.strapiapp.com/api/${endpoint}/${id}?populate=*`
+  const url = `https://syrianuniversity-production.up.railway.app/api/${endpoint}/${id}?populate=*`
   const res = await fetch(url, {
     next: { revalidate: 10 }
   })
