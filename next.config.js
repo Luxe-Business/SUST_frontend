@@ -4,7 +4,7 @@ const nextConfig = {
     domains: [
       'images.unsplash.com',
       'mdbcdn.b-cdn.net',
-      'ambitious-warmth-a158024e45.media.strapiapp.com',
+      'syrianuniversity-production.up.railway.app/',
       'via.placeholder.com',
       'tuk-cdn.s3.amazonaws.com'
     ]
